@@ -1,0 +1,27 @@
+
+
+Started GET "/rails/info/properties" for 127.0.0.1 at 2011-01-13 10:34:02 +0300
+
+Mysql2::Error (Unknown database 'credits_development'):
+  
+
+Rendered /home/adam/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered /home/adam/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (33.2ms)
+Rendered /home/adam/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (70.9ms)
+
+
+Started GET "/rails/info/properties" for 127.0.0.1 at 2011-01-13 10:34:06 +0300
+
+Mysql2::Error (Unknown database 'credits_development'):
+  
+
+Rendered /home/adam/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (6.7ms)
+Rendered /home/adam/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.8ms)
+Rendered /home/adam/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (33.2ms)
+
+
+Started GET "/rails/info/properties" for 127.0.0.1 at 2011-01-13 10:36:01 +0300
+  Processing by Rails::InfoController#properties as */*
+  [1m[36mSQL (63.7ms)[0m  [1mSHOW TABLES[0m
+Rendered inline template (0.9ms)
+Completed 200 OK in 287ms (Views: 2.9ms | ActiveRecord: 63.7ms)
