@@ -8,11 +8,9 @@ gem 'simple_form'
 gem 'clearance'
 gem 'russian'
 gem 'cancan'
-gem 'rdiscount'
 gem 'mysql2'
 
 gem 'capistrano'
-
 
 group :development, :test do
 	gem 'populator'

@@ -22,5 +22,9 @@ Credits::Application.configure do
 
   # Only use best-standards-support built into browsers
   config.action_dispatch.best_standards_support = :builtin
+    
+  # The locale for Faker gem
+  Faker::Config.locale = :ru
+  config.i18n.fallbacks.defaults = [:en]
 end
 
