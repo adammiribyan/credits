@@ -1,0 +1,90 @@
+html {  min-height: 100%; }
+
+body {
+	background-attachment: fixed;
+	background-color: white;
+	background-image: url(http://assets.bookmate.ru/1762166858/framework/stylesheets/global/d.gif);
+	color: black;
+	font: normal normal normal 13px Helvetica, Arial, sans-serif;
+	position: relative; }
+
+.g-centered {
+	margin: 0px auto; }
+		
+.g-limit {
+	width: 1000px; }
+
+.l-page {
+	min-height: 100%;
+	position: relative; 
+	
+	.l-page {
+		min-height: 0px;
+		padding-bottom: 120px;
+	}
+	.l-view {
+		margin: 0px auto;
+		width: 990px;
+	}
+}
+
+.l-page-bottom {
+	clear: both;
+	height: 100px;
+	margin-top: -100px;
+	position: relative;
+	z-index: 1; 
+	
+	.l-page-bottom .l-view {
+		padding-top: 15px;
+	}
+}
+	
+.clear { clear: both; }
+
+.b-header {
+	position: relative;
+	z-index: 1; }
+
+.b-footer {	
+	border: 1px solid #DFDFDF;
+	color: #888;
+	font-size: 13px;
+	height: 60px;
+	padding-left: 55px; }
+
+@import "shared/_fonts";
+
+h1 { 
+	position:relative; 
+	font-family:'HelveticaNeueCyrillic45Light'; 
+	font-size-adjust: 0.51; 
+	font-size:42px; 
+	color:#333; 
+	font-weight:normal; 
+	line-height:normal; }
+h1 { margin: 30px 0px 25px 0px; }
+h2 { 
+	position:relative; 
+	font-family:'HelveticaNeueCyrillic85Heavy'; 
+	font-size-adjust: 0.52; 
+	font-size:20px; 
+	color:#282828; 
+	font-weight:normal; }
+h3 { 
+	position:relative; 
+	font-family:'HelveticaNeueCyrillic45Light'; 
+	font-size-adjust: 0.51; 
+	font-size:20px; 
+	color:#282828; 
+	font-weight:normal; 
+	letter-spacing:-0.2px; }
+h3.price { display: inline-block; margin: 3px 0px 0px 3px; }
+h3 a { font-family:'HelveticaNeueCyrillic85Heavy'; font-size-adjust: 0.52; color:#282828; background:none; }
+h3 a:hover { background-position:0 0.85em !important; background-image:url(/images/dash-333.gif); background-repeat:repeat-x; }
+hr {
+	border: 0 hidden;
+	border-top: 1px solid #d6d6d6;
+	clear: both;
+	height: 0; }
+@import "shared/_forms";

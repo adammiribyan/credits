@@ -1,0 +1,16 @@
+= simple_form_for @request do |f|
+  = f.error_notification
+  
+  .inputs
+    = f.input :fullname
+    %label.string.optional{:for => "price"}
+      = t("simple_form.labels.price")
+      %h3.price
+        %span{:id => "price-value"}
+        %span руб.        
+    = render "shared/price-slider"
+    = f.input :email
+    = f.input :details
+  
+  .actions
+    %input{:type => "image", :src => "/images/send.png"} 

@@ -73,5 +73,5 @@ SimpleForm.setup do |config|
   # config.default_input_size = 50
 
   # When false, do not use translations for labels, hints or placeholders.
-  # config.translate = true
+  config.translate = true
 end

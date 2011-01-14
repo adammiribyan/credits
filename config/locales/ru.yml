@@ -52,3 +52,10 @@ ru:
       day: День
       month: Месяц
       year: Год
+      
+  app:
+    back: "Назад"
+    
+    requests:
+      meta:
+        title: "Новая заявка"
