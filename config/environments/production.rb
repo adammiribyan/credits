@@ -49,7 +49,7 @@ Credits::Application.configure do
   
   # The locale for Faker gem
   Faker::Config.locale = :ru
-  config.i18n.fallbacks.defaults = [:en]
+  # config.i18n.fallbacks.defaults = [:en]
   
   config.action_mailer.default_url_options = { :host => "adammiribyan.com" }  
   config.action_mailer.delivery_method = :smtp
