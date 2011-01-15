@@ -1,0 +1,15 @@
+= title t("app.clearance.login.title")
+
+%h1= t("app.clearance.login.title")
+
+.b-request-form
+  = simple_form_for :session, :url => session_path do |f|
+    = f.error_notification
+    
+    .inputs
+      = f.input :email, :hint => "", :required => false
+      = f.input :password, :as => :password, :required => false
+      = f.input :remember_me, :as => :boolean
+    
+    .actions
+      = f.button :submit, :label => "Войти"

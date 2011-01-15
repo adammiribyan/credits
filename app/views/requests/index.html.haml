@@ -1,0 +1,33 @@
+= title t("app.requests.index.title")
+
+%h1= t("app.requests.index.title")
+
+.b-requests-list  
+  %table#requests
+    %thead
+      %tr
+        %th{:style => "width: 25%;"}
+          %span= t("app.requests.fields.fullname")
+        %th{:style => "width: 20%;"}
+          %span= t("app.requests.fields.email")
+        %th{:style => "width: 12%;"}
+          %span
+            = succeed "," do
+              = t("app.requests.fields.price")
+            :plain 
+              <span class="rub">Р<i>–</i></span>
+        %th{:style => "width: 25%;"}
+          %span= t("app.requests.fields.details")
+          
+    %tbody
+      - @requests.each do |request, i|
+        %tr
+          %td
+            = request.fullname
+          %td
+            = mail_to request.email, request.email
+          %td.digits
+            = request.price
+          %td
+            = request.details
+      

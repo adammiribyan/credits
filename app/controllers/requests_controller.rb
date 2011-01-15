@@ -1,8 +1,9 @@
 class RequestsController < ApplicationController
-  # GET /requests
-  # GET /requests.xml
+  before_filter :authenticate, :only => [:index, :show, :destroy]
+  load_and_authorize_resource :request
+  
   def index
-    @requests = Request.all
+    @requests = Request.all:order => 'created_at desc'
 
     respond_to do |format|
       format.html # index.html.erb
@@ -10,8 +11,6 @@ class RequestsController < ApplicationController
     end
   end
 
-  # GET /requests/1
-  # GET /requests/1.xml
   def show
     @request = Request.find(params[:id])
 
@@ -21,8 +20,6 @@ class RequestsController < ApplicationController
     end
   end
 
-  # GET /requests/new
-  # GET /requests/new.xml
   def new
     @request = Request.new
 
@@ -32,45 +29,19 @@ class RequestsController < ApplicationController
     end
   end
 
-  # GET /requests/1/edit
-  def edit
-    @request = Request.find(params[:id])
-  end
-
-  # POST /requests
-  # POST /requests.xml
   def create
     @request = Request.new(params[:request])
 
     respond_to do |format|
       if @request.save
-        format.html { redirect_to(@request, :notice => 'Request was successfully created.') }
-        format.xml  { render :xml => @request, :status => :created, :location => @request }
+        flash[:notice] = t("app.flashes.requests.create")
+        format.html { render :action => "new" }
       else
         format.html { render :action => "new" }
-        format.xml  { render :xml => @request.errors, :status => :unprocessable_entity }
       end
     end
   end
 
-  # PUT /requests/1
-  # PUT /requests/1.xml
-  def update
-    @request = Request.find(params[:id])
-
-    respond_to do |format|
-      if @request.update_attributes(params[:request])
-        format.html { redirect_to(@request, :notice => 'Request was successfully updated.') }
-        format.xml  { head :ok }
-      else
-        format.html { render :action => "edit" }
-        format.xml  { render :xml => @request.errors, :status => :unprocessable_entity }
-      end
-    end
-  end
-
-  # DELETE /requests/1
-  # DELETE /requests/1.xml
   def destroy
     @request = Request.find(params[:id])
     @request.destroy

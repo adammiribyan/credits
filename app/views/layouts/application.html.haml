@@ -6,9 +6,11 @@
     .l-page
       .l-page
         .b-header
+          = render "shared/flashes" 
+          = render "shared/user_bar"          
           
-        .g-limit.g-centered
-          = yield
+        .g-limit.g-centered                  
+          = yield          
           
     .l-page-bottom
       .g-limit.g-centered

@@ -56,6 +56,27 @@ ru:
   app:
     back: "Назад"
     
+    flashes:
+      requests:
+        create: "Заявка успешно сохранена и отправлена на рассмотрение."
+        
+    
+    clearance:
+      login:
+        anchor: "Войти"
+        title: "Вход на сайт"
+      logout: 
+        anchor: "Выйти"
+      signup:
+        title: "Регистрация"
+    
     requests:
-      meta:
-        title: "Новая заявка"
+      fields:
+        fullname: "Имя"
+        email: "Электропочта"
+        price: "Сумма"
+        details: "Пожелания"
+      new:
+        title: "Новая заявка"        
+      index:
+        title: "Список заявок"                      

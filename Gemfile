@@ -12,7 +12,9 @@ gem 'mysql2'
 
 gem 'capistrano'
 
-group :development, :test do
-	gem 'populator'
-	gem 'faker', :git => "git://github.com/stympy/faker.git"
-end
+gem 'populator'
+gem 'faker', :git => "git://github.com/stympy/faker.git"
+
+
+# group :development, :test do
+# end

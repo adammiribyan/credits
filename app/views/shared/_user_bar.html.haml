@@ -1,0 +1,12 @@
+.b-user-bar
+  - unless signed_in?
+    = link_to_unless_current t("app.clearance.login.anchor"), sign_in_path
+  - else
+    %ul
+      %li.current_user
+        %span= current_user.email
+      - if can? :obtain_additional_details, Request
+        %li
+          = link_to_unless_current t("app.requests.index.title"), requests_path
+      %li.sign_out
+        = link_to t("app.clearance.logout.anchor"), sign_out_path, :method => :delete

@@ -7,10 +7,11 @@
       = t("simple_form.labels.price")
       %h3.price
         %span{:id => "price-value"}
-        %span руб.        
+        %span руб.
+    = f.input :price, :as => :hidden        
     = render "shared/price-slider"
     = f.input :email
     = f.input :details
   
   .actions
-    %input{:type => "image", :src => "/images/send.png"} 
+    %input{:type => "image", :src => "/images/send.png"}

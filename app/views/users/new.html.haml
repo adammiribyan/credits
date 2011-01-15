@@ -1,0 +1,15 @@
+= title t("app.clearance.signup.title")
+
+%h1= t("app.clearance.signup.title")
+
+.b-request-form
+  = simple_form_for @user do |f|
+    = f.error_notification
+    
+    .inputs
+      = f.input :email, :hint => "", :required => false
+      = f.input :password, :required => false
+      = f.input :password_confirmation, :required => false
+      
+    .actions
+      = f.button :submit, :label => "Зарегистрироваться"

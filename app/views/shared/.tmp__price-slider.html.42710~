@@ -16,18 +16,17 @@ var labels = '<span class="legend" style="left: 0%;"><span class="container" sty
  
 $("#price-selector").html(labels); // Замещаем статичное содержимое блока
 $('#price-value').html('8000'); // Подставляем цену в поле, так как по умолчанию выбираем максимальное значение ползунка
-$('#request_price').attr('value', '8000')
 // Слайдер сделан на основе стандартного компонента jQueriUI
 $(function() {
 	$("#price-selector").slider({
 		range: "min",
-		value: 8000,
-		min: 200,
-		max: 8000,
+		value: 100,
+		min: 0,
+		max: 100,
 		slide: function(event, ui) {						
-			var price = ui.value;
+			var value = 200 + Math.round(7800*ui.value/100);
+			var price = value;
 			$('#price-value').html(price); // Подставляем значение строки
-			$('#request_price').attr('value', price)
 			// !!! Здесь же нужно будет подставить цену в ту форму или в тот запрос, который будет взаимодействовать с сервером
 		}
 	});

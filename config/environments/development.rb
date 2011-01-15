@@ -26,5 +26,17 @@ Credits::Application.configure do
   # The locale for Faker gem
   Faker::Config.locale = :ru
   config.i18n.fallbacks.defaults = [:en]
+  
+  config.action_mailer.default_url_options = { :host => "localhost:3000" }  
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    :address              => "smtp.gmail.com",
+    :port                 => 587,
+    :domain               => 't-a-l-k-s.com',
+    :user_name            => 'adam.miribyan',
+    :password             => 'god.love.sex.',
+    :authentication       => 'plain',
+    :enable_starttls_auto => true  
+  }
 end
 
