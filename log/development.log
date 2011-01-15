@@ -6226,3 +6226,75 @@ Rendered shared/_flashes.html.haml (8.4ms)
 Rendered shared/_user_bar.html.haml (9.9ms)
 Rendered requests/index.html.haml within layouts/application (435.4ms)
 Completed 200 OK in 657ms (Views: 459.2ms | ActiveRecord: 12.8ms)
+
+
+Started POST "/sign_out" for 127.0.0.1 at 2011-01-15 23:25:52 +0300
+  Processing by Clearance::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[35mUser Load (86.2ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = 'ba7310f79998348c9c82f73ceaa8db3396679600') LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mAREL (18.6ms)[0m  UPDATE `users` SET `remember_token` = '431d875f3101e6845b574f3bd49ec41b06828ba8', `updated_at` = '2011-01-15 20:25:53' WHERE (`users`.`id` = 4)
+  [1m[36mSQL (78.9ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/sign_in
+Completed 302 Found in 381ms
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2011-01-15 23:25:54 +0300
+  Processing by Clearance::SessionsController#new as HTML
+Rendered shared/_head.html.haml (41.1ms)
+Rendered shared/_flashes.html.haml (4.1ms)
+Rendered shared/_user_bar.html.haml (9.3ms)
+Rendered sessions/new.html.haml within layouts/application (143.7ms)
+Completed 200 OK in 217ms (Views: 210.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2011-01-15 23:25:57 +0300
+  Processing by Clearance::SessionsController#new as HTML
+Rendered shared/_head.html.haml (10.1ms)
+Rendered shared/_flashes.html.haml (4.2ms)
+Rendered shared/_user_bar.html.haml (7.9ms)
+Rendered sessions/new.html.haml within layouts/application (189.5ms)
+Completed 200 OK in 215ms (Views: 210.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/session" for 127.0.0.1 at 2011-01-15 23:26:07 +0300
+  Processing by Clearance::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "session"=>{"email"=>"adam.miribyan@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Save Session"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`email` = 'adam.miribyan@gmail.com') LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 49ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-15 23:26:07 +0300
+  Processing by RequestsController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '431d875f3101e6845b574f3bd49ec41b06828ba8') LIMIT 1[0m
+Rendered shared/_price-slider.html (1.2ms)
+Rendered requests/_form.html.haml (181.5ms)
+Rendered shared/_head.html.haml (9.1ms)
+Rendered shared/_flashes.html.haml (5.5ms)
+Rendered shared/_user_bar.html.haml (9.8ms)
+Rendered requests/new.html.haml within layouts/application (243.9ms)
+Completed 200 OK in 373ms (Views: 273.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-15 23:26:11 +0300
+  Processing by RequestsController#new as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '431d875f3101e6845b574f3bd49ec41b06828ba8') LIMIT 1
+Rendered shared/_price-slider.html (1.6ms)
+Rendered requests/_form.html.haml (89.5ms)
+Rendered shared/_head.html.haml (11.6ms)
+Rendered shared/_flashes.html.haml (8.0ms)
+Rendered shared/_user_bar.html.haml (13.9ms)
+Rendered requests/new.html.haml within layouts/application (253.4ms)
+Completed 200 OK in 383ms (Views: 280.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/requests" for 127.0.0.1 at 2011-01-15 23:26:16 +0300
+  Processing by RequestsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '431d875f3101e6845b574f3bd49ec41b06828ba8') LIMIT 1[0m
+  [1m[35mRequest Load (2.1ms)[0m  SELECT `requests`.* FROM `requests` ORDER BY created_at desc
+Rendered shared/_head.html.haml (14.1ms)
+Rendered shared/_flashes.html.haml (7.2ms)
+Rendered shared/_user_bar.html.haml (12.0ms)
+Rendered requests/index.html.haml within layouts/application (235.6ms)
+Completed 200 OK in 515ms (Views: 273.4ms | ActiveRecord: 2.7ms)
