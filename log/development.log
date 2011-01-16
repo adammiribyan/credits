@@ -6425,3 +6425,39 @@ Rendered shared/_flashes.html.haml (4.9ms)
 Rendered shared/_user_bar.html.haml (8.5ms)
 Rendered requests/index.html.haml within layouts/application (324.6ms)
 Completed 200 OK in 451ms (Views: 353.9ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-16 03:25:18 +0300
+  Processing by RequestsController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '431d875f3101e6845b574f3bd49ec41b06828ba8') LIMIT 1[0m
+Rendered shared/_price-slider.html (6.5ms)
+Rendered requests/_form.html.haml (258.7ms)
+Rendered shared/_head.html.haml (19.9ms)
+Rendered shared/_flashes.html.haml (4.2ms)
+Rendered shared/_user_bar.html.haml (10.7ms)
+Rendered requests/new.html.haml within layouts/application (362.4ms)
+Completed 200 OK in 521ms (Views: 385.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-16 04:30:55 +0300
+  Processing by RequestsController#new as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '431d875f3101e6845b574f3bd49ec41b06828ba8') LIMIT 1
+Rendered shared/_price-slider.html (1.1ms)
+Rendered requests/_form.html.haml (165.5ms)
+Rendered shared/_head.html.haml (11.2ms)
+Rendered shared/_flashes.html.haml (4.1ms)
+Rendered shared/_user_bar.html.haml (9.2ms)
+Rendered requests/new.html.haml within layouts/application (263.5ms)
+Completed 200 OK in 454ms (Views: 286.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-16 04:31:00 +0300
+  Processing by RequestsController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '431d875f3101e6845b574f3bd49ec41b06828ba8') LIMIT 1[0m
+Rendered shared/_price-slider.html (1.1ms)
+Rendered requests/_form.html.haml (159.9ms)
+Rendered shared/_head.html.haml (14.6ms)
+Rendered shared/_flashes.html.haml (5.4ms)
+Rendered shared/_user_bar.html.haml (13.7ms)
+Rendered requests/new.html.haml within layouts/application (223.0ms)
+Completed 200 OK in 384ms (Views: 248.0ms | ActiveRecord: 0.7ms)

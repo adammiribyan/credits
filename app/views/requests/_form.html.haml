@@ -7,7 +7,8 @@
       = t("simple_form.labels.price")
       %h3.price
         %span{:id => "price-value"}
-        %span руб.
+        :plain
+          <span class="rub">Р<i>–</i></span>
     = f.input :price, :as => :hidden        
     = render "shared/price-slider"
     = f.input :email
