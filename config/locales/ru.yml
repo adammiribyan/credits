@@ -71,6 +71,7 @@ ru:
         title: "Регистрация"
     
     requests:
+      no_new_requests: "Новых заявок нет"
       fields:
         fullname: "Имя"
         email: "Электропочта"

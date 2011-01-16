@@ -9,4 +9,25 @@ $(document).ready(function() {
 		function() {
 			$(this).removeClass("emphasized")
 	});
+	
+	// var refreshId = setInterval(function() {
+	//     $('#some-content').load('/path/to/your.php');
+	// }, 3000);
+	
+	$(".refresh").hover(
+		function() {
+			$(this).addClass("refresh_hover");
+		},
+		function() {
+			$(this).removeClass("refresh_hover");
+		}
+	)
+	.click(function() {
+		$(this).addClass("refresh_loading");
+		setTimeout(function() {
+			$(".refresh_loading").removeClass("refresh_loading");
+			var current_count = $("#shown_requests_count").text();
+			$(".b-notice-wrapper").load('/check_for_new_requests.js?count=' + current_count);
+		}, 500);
+	});
 });

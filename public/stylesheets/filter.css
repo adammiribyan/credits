@@ -9,7 +9,7 @@
 .filter-box {
 	width: 205px; 
 	font-family: Arial, Helvetica, sans-serif; 
-	margin: 10px 0px 20px 0px;}
+	margin: 10px 0px 15px 0px;}
 /*.filter-box * {border: 1px solid red;}  */
 /* Отмена непереносимости слов в лейблах */
 .filter-box label {white-space: normal;}

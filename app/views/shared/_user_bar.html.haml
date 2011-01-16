@@ -10,3 +10,10 @@
           = link_to_unless_current t("app.requests.index.title"), requests_path
       %li.sign_out
         = link_to t("app.clearance.logout.anchor"), sign_out_path, :method => :delete
+
+- if (can? :obtain_additional_details, Request) and @show_additional_details
+  .b-refresh-box
+    .b-notice-wrapper
+      %span.notice.empty
+        Новых заявок нет 
+    %span.refresh

@@ -9,7 +9,9 @@ body {
 	position: relative;
 	overflow-y: auto !important; }
 
-a:link {color: #0055CC;}
+@link_color: #0055CC;
+
+a:link {color: @link_color;}
 a:hover {color: #CC0000;}
 a:visited {color: #990099;}
 a:visited:hover {color: #CC0000;}
@@ -51,11 +53,47 @@ a:focus {outline:none;}
 
 .b-header {
 	position: relative;
-	z-index: 1; 
+	z-index: 1;
+	
+	.b-refresh-box {
+		position: absolute;
+		right: 0px;
+		top: 50px;
+		margin: 10px 30px 0px 0px; 		
+			
+		span.refresh {
+			background: url(http://km4.artgorbunov.ru/i/refresh.gif) no-repeat;
+			cursor: pointer;
+			display: inline-block !important;
+			height: 25px;
+			margin-bottom: 3px;
+			position: relative;
+			vertical-align: middle;
+			width: 25px; }		
+		span.refresh_hover {
+			background-image: url(http://km4.artgorbunov.ru/i/refresh_hover.gif);
+			display: none; }
+		span.refresh_loading { 
+			cursor: default; 
+			background-image: url(http://km4.artgorbunov.ru/i/refresh_loading.gif);
+			display: none; }
+		
+		.b-notice-wrapper {
+			font-size: 89%;
+			display: inline-block;
+			
+			span.empty { color: #888; }
+			span.full {
+				border-bottom: 1px dotted @link_color;
+				color: @link_color;
+				cursor: pointer;		
+			}	
+		}
+	} 
 	
 	.b-user-bar {
 		position: absolute;
-		right: 0;
+		right: 0px;
 		margin: 10px 30px 0px 0px;
 		
 		a { color: #060 !important; }
@@ -125,5 +163,6 @@ hr {
 	padding-left: 30px; 
 	position: relative;
 	width: 700px; }
+	
 @import "shared/_forms";
 @import "shared/_tables";

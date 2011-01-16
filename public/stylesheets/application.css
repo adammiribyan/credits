@@ -50,9 +50,44 @@ a:focus { outline: none; }
   position: relative;
   z-index: 1;
 }
+.b-header .b-refresh-box {
+  position: absolute;
+  right: 0px;
+  top: 50px;
+  margin: 10px 30px 0px 0px;
+}
+.b-header .b-refresh-box span.refresh {
+  background: url(http://km4.artgorbunov.ru/i/refresh.gif) no-repeat;
+  cursor: pointer;
+  display: inline-block !important;
+  height: 25px;
+  margin-bottom: 3px;
+  position: relative;
+  vertical-align: middle;
+  width: 25px;
+}
+.b-header .b-refresh-box span.refresh_hover {
+  background-image: url(http://km4.artgorbunov.ru/i/refresh_hover.gif);
+  display: none;
+}
+.b-header .b-refresh-box span.refresh_loading {
+  cursor: default;
+  background-image: url(http://km4.artgorbunov.ru/i/refresh_loading.gif);
+  display: none;
+}
+.b-header .b-refresh-box .b-notice-wrapper {
+  font-size: 89%;
+  display: inline-block;
+}
+.b-header .b-refresh-box .b-notice-wrapper span.empty { color: #888888; }
+.b-header .b-refresh-box .b-notice-wrapper span.full {
+  border-bottom: 1px dotted #0055cc;
+  color: #0055cc;
+  cursor: pointer;
+}
 .b-header .b-user-bar {
   position: absolute;
-  right: 0;
+  right: 0px;
   margin: 10px 30px 0px 0px;
 }
 .b-header .b-user-bar a { color: #006600 !important; }

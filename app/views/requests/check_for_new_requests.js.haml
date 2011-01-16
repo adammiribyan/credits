@@ -1,0 +1,4 @@
+- if @new_requests_count.to_i > 0
+    %span.full= new_requests_count @new_requests_count
+- else
+    %span.empty= t("app.requests.no_new_requests")
