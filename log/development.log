@@ -6300,3 +6300,128 @@ Rendered requests/index.html.haml within layouts/application (235.6ms)
 Completed 200 OK in 515ms (Views: 273.4ms | ActiveRecord: 2.7ms)
 DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /home/adam/Projects/credits/vendor/plugins/more/rails/init.rb. (called from <top (required)> at /home/adam/Projects/credits/config/environment.rb:5)
 DEPRECATION WARNING: RAILS_ENV is deprecated. Please use ::Rails.env. (called from block in <class:Plugin> at /home/adam/Projects/credits/vendor/plugins/more/rails/init.rb:1)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /home/adam/Projects/credits/vendor/plugins/more/rails/init.rb. (called from <top (required)> at /home/adam/Projects/credits/config/environment.rb:5)
+DEPRECATION WARNING: RAILS_ENV is deprecated. Please use ::Rails.env. (called from block in <class:Plugin> at /home/adam/Projects/credits/vendor/plugins/more/rails/init.rb:1)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-16 02:55:39 +0300
+  Processing by RequestsController#new as HTML
+  [1m[36mSQL (0.7ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '431d875f3101e6845b574f3bd49ec41b06828ba8') LIMIT 1
+Rendered shared/_price-slider.html (1.3ms)
+Rendered requests/_form.html.haml (901.9ms)
+Rendered shared/_head.html.haml (13.2ms)
+Rendered shared/_flashes.html.haml (5.4ms)
+Rendered shared/_user_bar.html.haml (13.0ms)
+Rendered requests/new.html.haml within layouts/application (1153.9ms)
+Completed 200 OK in 2837ms (Views: 1184.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/requests" for 127.0.0.1 at 2011-01-16 02:56:02 +0300
+  Processing by RequestsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '431d875f3101e6845b574f3bd49ec41b06828ba8') LIMIT 1[0m
+  [1m[35mRequest Load (5.1ms)[0m  SELECT `requests`.* FROM `requests` ORDER BY created_at desc
+Rendered shared/_head.html.haml (13.0ms)
+Rendered shared/_flashes.html.haml (5.0ms)
+Rendered shared/_user_bar.html.haml (9.1ms)
+Rendered requests/index.html.haml within layouts/application (236.8ms)
+Completed 200 OK in 519ms (Views: 396.5ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/requests" for 127.0.0.1 at 2011-01-16 03:00:24 +0300
+  Processing by RequestsController#index as HTML
+  [1m[36mUser Load (8.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '431d875f3101e6845b574f3bd49ec41b06828ba8') LIMIT 1[0m
+  [1m[35mRequest Load (14.6ms)[0m  SELECT `requests`.* FROM `requests` ORDER BY created_at desc
+Rendered shared/_head.html.haml (24.3ms)
+Rendered shared/_flashes.html.haml (13.4ms)
+Rendered shared/_user_bar.html.haml (18.2ms)
+Rendered requests/index.html.haml within layouts/application (274.1ms)
+Completed 200 OK in 612ms (Views: 288.0ms | ActiveRecord: 23.3ms)
+
+
+Started GET "/requests" for 127.0.0.1 at 2011-01-16 03:00:45 +0300
+  Processing by RequestsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '431d875f3101e6845b574f3bd49ec41b06828ba8') LIMIT 1[0m
+  [1m[35mRequest Load (1.8ms)[0m  SELECT `requests`.* FROM `requests` ORDER BY created_at desc
+Rendered shared/_head.html.haml (13.6ms)
+Rendered shared/_flashes.html.haml (4.3ms)
+Rendered shared/_user_bar.html.haml (10.0ms)
+Rendered requests/index.html.haml within layouts/application (331.7ms)
+Completed 200 OK in 1244ms (Views: 354.2ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/requests" for 127.0.0.1 at 2011-01-16 03:04:59 +0300
+  Processing by RequestsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '431d875f3101e6845b574f3bd49ec41b06828ba8') LIMIT 1[0m
+  [1m[35mRequest Load (1.9ms)[0m  SELECT `requests`.* FROM `requests` ORDER BY created_at desc
+Rendered shared/_head.html.haml (13.9ms)
+Rendered shared/_flashes.html.haml (4.5ms)
+Rendered shared/_user_bar.html.haml (8.7ms)
+Rendered requests/index.html.haml within layouts/application (308.6ms)
+Completed 200 OK in 1238ms (Views: 325.1ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/requests" for 127.0.0.1 at 2011-01-16 03:09:41 +0300
+  Processing by RequestsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '431d875f3101e6845b574f3bd49ec41b06828ba8') LIMIT 1[0m
+  [1m[35mRequest Load (1.8ms)[0m  SELECT `requests`.* FROM `requests` ORDER BY created_at desc
+Rendered shared/_head.html.haml (13.4ms)
+Rendered shared/_flashes.html.haml (4.0ms)
+Rendered shared/_user_bar.html.haml (9.2ms)
+Rendered requests/index.html.haml within layouts/application (281.6ms)
+Completed 200 OK in 1261ms (Views: 295.2ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/requests" for 127.0.0.1 at 2011-01-16 03:10:08 +0300
+  Processing by RequestsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '431d875f3101e6845b574f3bd49ec41b06828ba8') LIMIT 1[0m
+  [1m[35mRequest Load (6.4ms)[0m  SELECT `requests`.* FROM `requests` ORDER BY created_at desc
+Rendered shared/_head.html.haml (8.8ms)
+Rendered shared/_flashes.html.haml (5.0ms)
+Rendered shared/_user_bar.html.haml (11.2ms)
+Rendered requests/index.html.haml within layouts/application (355.2ms)
+Completed 200 OK in 1233ms (Views: 369.6ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/requests" for 127.0.0.1 at 2011-01-16 03:11:08 +0300
+  Processing by RequestsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '431d875f3101e6845b574f3bd49ec41b06828ba8') LIMIT 1[0m
+  [1m[35mRequest Load (1.8ms)[0m  SELECT `requests`.* FROM `requests` ORDER BY created_at desc
+Rendered shared/_head.html.haml (11.9ms)
+Rendered shared/_flashes.html.haml (5.3ms)
+Rendered shared/_user_bar.html.haml (10.8ms)
+Rendered requests/index.html.haml within layouts/application (488.0ms)
+Completed 200 OK in 1356ms (Views: 512.3ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/requests" for 127.0.0.1 at 2011-01-16 03:12:51 +0300
+  Processing by RequestsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '431d875f3101e6845b574f3bd49ec41b06828ba8') LIMIT 1[0m
+  [1m[35mRequest Load (1.8ms)[0m  SELECT `requests`.* FROM `requests` ORDER BY created_at desc
+Rendered shared/_head.html.haml (13.7ms)
+Rendered shared/_flashes.html.haml (4.2ms)
+Rendered shared/_user_bar.html.haml (8.7ms)
+Rendered requests/index.html.haml within layouts/application (349.2ms)
+Completed 200 OK in 1204ms (Views: 367.4ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/requests" for 127.0.0.1 at 2011-01-16 03:13:25 +0300
+  Processing by RequestsController#index as HTML
+  [1m[36mUser Load (5.8ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '431d875f3101e6845b574f3bd49ec41b06828ba8') LIMIT 1[0m
+  [1m[35mRequest Load (1.9ms)[0m  SELECT `requests`.* FROM `requests` ORDER BY created_at desc
+Rendered shared/_head.html.haml (14.8ms)
+Rendered shared/_flashes.html.haml (6.1ms)
+Rendered shared/_user_bar.html.haml (8.9ms)
+Rendered requests/index.html.haml within layouts/application (402.8ms)
+Completed 200 OK in 837ms (Views: 477.6ms | ActiveRecord: 7.7ms)
+
+
+Started GET "/requests" for 127.0.0.1 at 2011-01-16 03:14:02 +0300
+  Processing by RequestsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '431d875f3101e6845b574f3bd49ec41b06828ba8') LIMIT 1[0m
+  [1m[35mRequest Load (1.8ms)[0m  SELECT `requests`.* FROM `requests` ORDER BY created_at desc
+Rendered shared/_head.html.haml (13.6ms)
+Rendered shared/_flashes.html.haml (4.9ms)
+Rendered shared/_user_bar.html.haml (8.5ms)
+Rendered requests/index.html.haml within layouts/application (324.6ms)
+Completed 200 OK in 451ms (Views: 353.9ms | ActiveRecord: 2.5ms)

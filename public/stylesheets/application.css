@@ -260,8 +260,7 @@ form.simple_form .boolean label {
 }
 .b-requests-list .fixed {
   background-color: white;
-  margin: 0px -1em;
-  padding: 0px 1em;
+  border-bottom: 1px solid #dddddd;
   position: fixed;
   top: 0px;
 }
@@ -276,6 +275,12 @@ form.simple_form .boolean label {
 }
 .b-requests-list table td { padding: 0.5em 2em 0 0; }
 .b-requests-list table td .price { font-weight: bold; }
+.b-requests-list table td .date {
+  display: inline-block;
+  font-size: 80%;
+  color: #888888;
+  margin-right: 3px;
+}
 .b-requests-list table td h3 {
   font-style: italic;
   margin-bottom: -1em;

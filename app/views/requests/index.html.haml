@@ -20,10 +20,11 @@
           %span= t("app.requests.fields.details")
           
     %tbody
-      - @requests.each do |request, i|
+      - @requests.each do |request|
         %tr
           %td
             = request.fullname
+            %span.date= I18n.l request.created_at.to_date
           %td
             = mail_to request.email, request.email
           %td.digits
