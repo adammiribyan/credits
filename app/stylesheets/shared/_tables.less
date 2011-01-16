@@ -24,6 +24,7 @@
 			padding: .5em 2em 0 0; 
 			
 			.price { font-weight: bold; }
+			.name { font-family: Georgia; }
 			.date {
 				display: inline-block;
 				font-size: 80%;
@@ -38,12 +39,14 @@
 		td.last, th.last { padding-right: 0; }
 		
 		tbody {	
-			overflow: scroll;		
+			overflow: auto !important;		
 			tr.emphasized { background-color: #fffdea; }
 			tr {
 				cursor: pointer;
 							
-				td { padding: 15px 0px 15px 0px; }
+				td { 
+					padding: 15px 0px 15px 0px;
+					vertical-align: baseline; }
 				td.digits { 
 					text-align: right; 
 					padding-right: 40px; }			
