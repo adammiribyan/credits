@@ -10,10 +10,6 @@ $(document).ready(function() {
 			$(this).removeClass("emphasized")
 	});
 	
-	// var refreshId = setInterval(function() {
-	//     $('#some-content').load('/path/to/your.php');
-	// }, 3000);
-	
 	$(".refresh").hover(
 		function() {
 			$(this).addClass("refresh_hover");
@@ -31,3 +27,9 @@ $(document).ready(function() {
 		}, 500);
 	});
 });
+
+setInterval(function() {
+    $(".refresh_loading").removeClass("refresh_loading");
+	var current_count = $("#shown_requests_count").text();
+	$(".b-notice-wrapper").load('/check_for_new_requests.js?count=' + current_count);
+}, 60000);
