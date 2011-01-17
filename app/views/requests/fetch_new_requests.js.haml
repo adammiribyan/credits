@@ -1,0 +1,11 @@
+- @new_requests.each do |request|
+  %tr
+    %td
+      %span.name= request.fullname
+      %span.date= I18n.l request.created_at.to_date
+    %td
+      = mail_to request.email, request.email
+    %td.digits
+      = request.price
+    %td
+      = request.details

@@ -10198,3 +10198,3136 @@ Rendered shared/_flashes.html.haml (4.7ms)
 Rendered shared/_user_bar.html.haml (12.7ms)
 Rendered requests/index.html.haml within layouts/application (367.0ms)
 Completed 200 OK in 527ms (Views: 385.2ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/check_for_new_requests.js?count=120" for 127.0.0.1 at 2011-01-16 18:35:35 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"120"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.6ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/check_for_new_requests.js.haml (4.4ms)
+Completed 200 OK in 158ms (Views: 8.6ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-16 23:07:10 +0300
+  Processing by RequestsController#new as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+Rendered shared/_price-slider.html (4.5ms)
+Rendered requests/_form.html.haml (503.1ms)
+Rendered shared/_head.html.haml (31.2ms)
+Rendered shared/_flashes.html.haml (4.8ms)
+Rendered shared/_user_bar.html.haml (31.6ms)
+Rendered requests/new.html.haml within layouts/application (691.7ms)
+Completed 200 OK in 1133ms (Views: 764.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/requests" for 127.0.0.1 at 2011-01-16 23:07:30 +0300
+  Processing by RequestsController#index as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+  [1m[36mRequest Load (0.6ms)[0m  [1mSELECT `requests`.* FROM `requests` ORDER BY requests.id DESC LIMIT 1[0m
+  [1m[35mRequest Load (12.6ms)[0m  SELECT `requests`.* FROM `requests` ORDER BY created_at desc
+Rendered shared/_head.html.haml (40.0ms)
+Rendered shared/_flashes.html.haml (19.9ms)
+Rendered shared/_user_bar.html.haml (51.1ms)
+Rendered requests/index.html.haml within layouts/application (1298.2ms)
+Completed 200 OK in 1779ms (Views: 1348.0ms | ActiveRecord: 13.8ms)
+
+
+Started GET "/check_for_new_requests.js?count=120" for 127.0.0.1 at 2011-01-16 23:07:35 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"120"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (9.2ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/check_for_new_requests.js.haml (26.0ms)
+Completed 200 OK in 296ms (Views: 35.8ms | ActiveRecord: 9.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-16 23:07:38 +0300
+  Processing by RequestsController#new as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+Rendered shared/_price-slider.html (7.4ms)
+Rendered requests/_form.html.haml (311.4ms)
+Rendered shared/_head.html.haml (44.9ms)
+Rendered shared/_flashes.html.haml (11.3ms)
+Rendered shared/_user_bar.html.haml (35.5ms)
+Rendered requests/new.html.haml within layouts/application (533.2ms)
+Completed 200 OK in 1429ms (Views: 602.4ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/requests" for 127.0.0.1 at 2011-01-16 23:07:45 +0300
+  Processing by RequestsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "request"=>{"fullname"=>"fsafa", "price"=>"5192", "email"=>"fdsafsa", "details"=>"sdafsafsa"}, "x"=>"52", "y"=>"7"}
+  [1m[35mUser Load (7.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.6ms)[0m  describe `requests`
+  [1m[36mAREL (7.9ms)[0m  [1mINSERT INTO `requests` (`fullname`, `email`, `price`, `details`, `created_at`, `updated_at`) VALUES ('fsafa', 'fdsafsa', 5192, 'sdafsafsa', '2011-01-16 20:07:46', '2011-01-16 20:07:46')[0m
+  [1m[35mSQL (43.6ms)[0m  COMMIT
+Rendered shared/_price-slider.html (1.1ms)
+Rendered requests/_form.html.haml (205.8ms)
+Rendered shared/_head.html.haml (39.9ms)
+Rendered shared/_flashes.html.haml (12.7ms)
+Rendered shared/_user_bar.html.haml (48.9ms)
+Rendered requests/new.html.haml within layouts/application (402.4ms)
+Completed 200 OK in 1283ms (Views: 446.4ms | ActiveRecord: 60.3ms)
+
+
+Started GET "/check_for_new_requests.js?count=120" for 127.0.0.1 at 2011-01-16 23:07:51 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"120"}
+  [1m[36mUser Load (6.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (5.8ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/check_for_new_requests.js.haml (18.4ms)
+Completed 200 OK in 268ms (Views: 26.8ms | ActiveRecord: 12.3ms)
+
+
+Started POST "/requests/121" for 127.0.0.1 at 2011-01-16 23:07:58 +0300
+
+AbstractController::ActionNotFound (The action 'update' could not be found for RequestsController):
+  
+
+Rendered /home/adam/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (2.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-16 23:08:05 +0300
+  Processing by RequestsController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+Rendered shared/_price-slider.html (1.2ms)
+Rendered requests/_form.html.haml (273.4ms)
+Rendered shared/_head.html.haml (50.7ms)
+Rendered shared/_flashes.html.haml (9.2ms)
+Rendered shared/_user_bar.html.haml (60.3ms)
+Rendered requests/new.html.haml within layouts/application (496.4ms)
+Completed 200 OK in 993ms (Views: 555.4ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/requests" for 127.0.0.1 at 2011-01-16 23:08:10 +0300
+  Processing by RequestsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "request"=>{"fullname"=>"fdsafa", "price"=>"4828", "email"=>"sdfsa", "details"=>"asfdaf"}, "x"=>"57", "y"=>"7"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (5.9ms)[0m  describe `requests`
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO `requests` (`fullname`, `email`, `price`, `details`, `created_at`, `updated_at`) VALUES ('fdsafa', 'sdfsa', 4828, 'asfdaf', '2011-01-16 20:08:11', '2011-01-16 20:08:11')[0m
+  [1m[35mSQL (32.4ms)[0m  COMMIT
+Rendered shared/_price-slider.html (10.5ms)
+Rendered requests/_form.html.haml (229.0ms)
+Rendered shared/_head.html.haml (33.7ms)
+Rendered shared/_flashes.html.haml (18.1ms)
+Rendered shared/_user_bar.html.haml (46.7ms)
+Rendered requests/new.html.haml within layouts/application (446.4ms)
+Completed 200 OK in 1092ms (Views: 516.9ms | ActiveRecord: 39.6ms)
+
+
+Started GET "/check_for_new_requests.js?count=120" for 127.0.0.1 at 2011-01-16 23:08:33 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"120"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.3ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/check_for_new_requests.js.haml (6.8ms)
+Completed 200 OK in 188ms (Views: 12.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/check_for_new_requests.js?count=120" for 127.0.0.1 at 2011-01-16 23:08:40 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"120"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.7ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/check_for_new_requests.js.haml (8.7ms)
+Completed 200 OK in 132ms (Views: 12.6ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/check_for_new_requests.js?count=120" for 127.0.0.1 at 2011-01-16 23:09:33 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"120"}
+  [1m[36mUser Load (6.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.7ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/check_for_new_requests.js.haml (9.0ms)
+Completed 200 OK in 770ms (Views: 29.1ms | ActiveRecord: 7.9ms)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /home/adam/Projects/credits/vendor/plugins/more/rails/init.rb. (called from <top (required)> at /home/adam/Projects/credits/config/environment.rb:5)
+DEPRECATION WARNING: RAILS_ENV is deprecated. Please use ::Rails.env. (called from block in <class:Plugin> at /home/adam/Projects/credits/vendor/plugins/more/rails/init.rb:1)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-17 18:24:13 +0300
+  Processing by RequestsController#new as HTML
+  [1m[36mSQL (46.7ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mUser Load (63.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '') LIMIT 1
+Rendered shared/_price-slider.html (1.8ms)
+Rendered requests/_form.html.haml (1078.8ms)
+Rendered shared/_head.html.haml (51.2ms)
+Rendered shared/_flashes.html.haml (11.7ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '') LIMIT 1[0m
+Rendered shared/_user_bar.html.haml (18.8ms)
+Rendered requests/new.html.haml within layouts/application (1644.3ms)
+Completed 200 OK in 2583ms (Views: 1705.7ms | ActiveRecord: 109.7ms)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2011-01-17 18:24:58 +0300
+  Processing by Clearance::SessionsController#new as HTML
+Rendered shared/_head.html.haml (29.4ms)
+Rendered shared/_flashes.html.haml (14.8ms)
+  [1m[35mUser Load (1.2ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '') LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '') LIMIT 1[0m
+Rendered shared/_user_bar.html.haml (235.3ms)
+Rendered sessions/new.html.haml within layouts/application (452.8ms)
+Completed 200 OK in 515ms (Views: 501.5ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/session" for 127.0.0.1 at 2011-01-17 18:25:03 +0300
+  Processing by Clearance::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "session"=>{"email"=>"adam.miribyan@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Save Session"}
+  [1m[35mUser Load (7.4ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`email` = 'adam.miribyan@gmail.com') LIMIT 1
+Redirected to http://localhost:4000/
+Completed 302 Found in 279ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-17 18:25:04 +0300
+  Processing by RequestsController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+Rendered shared/_price-slider.html (1.1ms)
+Rendered requests/_form.html.haml (89.6ms)
+Rendered shared/_head.html.haml (17.2ms)
+Rendered shared/_flashes.html.haml (4.4ms)
+Rendered shared/_user_bar.html.haml (18.5ms)
+Rendered requests/new.html.haml within layouts/application (165.5ms)
+Completed 200 OK in 321ms (Views: 181.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/requests" for 127.0.0.1 at 2011-01-17 18:25:07 +0300
+  Processing by RequestsController#index as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+  [1m[36mRequest Load (10.5ms)[0m  [1mSELECT `requests`.* FROM `requests` ORDER BY requests.id DESC LIMIT 1[0m
+  [1m[35mRequest Load (22.9ms)[0m  SELECT `requests`.* FROM `requests` ORDER BY created_at desc
+Rendered shared/_head.html.haml (43.1ms)
+Rendered shared/_flashes.html.haml (13.3ms)
+Rendered shared/_user_bar.html.haml (20.4ms)
+Rendered requests/index.html.haml within layouts/application (863.4ms)
+Completed 200 OK in 1120ms (Views: 900.6ms | ActiveRecord: 34.2ms)
+
+
+Started GET "/check_for_new_requests.js?count=122" for 127.0.0.1 at 2011-01-17 18:25:12 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"122"}
+  [1m[36mUser Load (49.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (11.7ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/check_for_new_requests.js.haml (4.8ms)
+Completed 200 OK in 295ms (Views: 25.1ms | ActiveRecord: 61.0ms)
+
+
+Started POST "/requests" for 127.0.0.1 at 2011-01-17 18:25:21 +0300
+  Processing by RequestsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "request"=>{"fullname"=>"Adam James Smith", "price"=>"5400", "email"=>"safda", "details"=>"fdsadfafa"}, "x"=>"47", "y"=>"12"}
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mSQL (15.3ms)[0m  BEGIN
+  [1m[36mSQL (18.3ms)[0m  [1mdescribe `requests`[0m
+  [1m[35mAREL (65.4ms)[0m  INSERT INTO `requests` (`fullname`, `email`, `price`, `details`, `created_at`, `updated_at`) VALUES ('Adam James Smith', 'safda', 5400, 'fdsadfafa', '2011-01-17 15:25:22', '2011-01-17 15:25:22')
+  [1m[36mSQL (95.4ms)[0m  [1mCOMMIT[0m
+Rendered shared/_price-slider.html (1.1ms)
+Rendered requests/_form.html.haml (192.3ms)
+Rendered shared/_head.html.haml (13.9ms)
+Rendered shared/_flashes.html.haml (4.2ms)
+Rendered shared/_user_bar.html.haml (22.0ms)
+Rendered requests/new.html.haml within layouts/application (266.3ms)
+Completed 200 OK in 852ms (Views: 283.1ms | ActiveRecord: 195.4ms)
+
+
+Started GET "/check_for_new_requests.js?count=122" for 127.0.0.1 at 2011-01-17 18:25:25 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"122"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+  [1m[36mRequest Load (1.8ms)[0m  [1mSELECT `requests`.* FROM `requests`[0m
+Rendered requests/check_for_new_requests.js.haml (4.6ms)
+Completed 200 OK in 116ms (Views: 12.5ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/requests" for 127.0.0.1 at 2011-01-17 18:25:59 +0300
+  Processing by RequestsController#index as HTML
+  [1m[35mUser Load (54.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+  [1m[36mRequest Load (0.6ms)[0m  [1mSELECT `requests`.* FROM `requests` ORDER BY requests.id DESC LIMIT 1[0m
+  [1m[35mRequest Load (10.0ms)[0m  SELECT `requests`.* FROM `requests` ORDER BY created_at desc
+Rendered shared/_head.html.haml (54.6ms)
+Rendered shared/_flashes.html.haml (10.3ms)
+Rendered shared/_user_bar.html.haml (14.5ms)
+Rendered requests/index.html.haml within layouts/application (404.7ms)
+Completed 200 OK in 1060ms (Views: 499.6ms | ActiveRecord: 64.7ms)
+
+
+Started GET "/check_for_new_requests.js?count=123" for 127.0.0.1 at 2011-01-17 18:27:19 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"123"}
+  [1m[36mUser Load (2514.9ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1462.5ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/check_for_new_requests.js.haml (239.7ms)
+Completed 200 OK in 17735ms (Views: 314.2ms | ActiveRecord: 3977.4ms)
+
+
+Started GET "/check_for_new_requests.js?count=123" for 127.0.0.1 at 2011-01-17 18:28:14 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"123"}
+  [1m[36mUser Load (1645.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (135.6ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/check_for_new_requests.js.haml (38.8ms)
+Completed 200 OK in 12691ms (Views: 612.2ms | ActiveRecord: 1781.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-17 18:29:47 +0300
+  Processing by RequestsController#new as HTML
+  [1m[36mUser Load (99.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+Rendered shared/_price-slider.html (1.2ms)
+Rendered requests/_form.html.haml (151.2ms)
+Rendered shared/_head.html.haml (62.2ms)
+Rendered shared/_flashes.html.haml (12.1ms)
+Rendered shared/_user_bar.html.haml (19.2ms)
+Rendered requests/new.html.haml within layouts/application (512.7ms)
+Completed 200 OK in 1335ms (Views: 780.6ms | ActiveRecord: 99.7ms)
+
+
+Started GET "/requests" for 127.0.0.1 at 2011-01-17 18:29:53 +0300
+  Processing by RequestsController#index as HTML
+  [1m[35mUser Load (3.1ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+  [1m[36mRequest Load (0.5ms)[0m  [1mSELECT `requests`.* FROM `requests` ORDER BY requests.id DESC LIMIT 1[0m
+  [1m[35mRequest Load (2.4ms)[0m  SELECT `requests`.* FROM `requests` ORDER BY created_at desc
+Rendered shared/_head.html.haml (40.6ms)
+Rendered shared/_flashes.html.haml (14.1ms)
+Rendered shared/_user_bar.html.haml (43.9ms)
+Rendered requests/index.html.haml within layouts/application (677.3ms)
+Completed 200 OK in 979ms (Views: 727.5ms | ActiveRecord: 6.0ms)
+
+
+Started POST "/requests" for 127.0.0.1 at 2011-01-17 18:30:03 +0300
+  Processing by RequestsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "request"=>{"fullname"=>"Adam Miribyan", "price"=>"5088", "email"=>"fsadfa", "details"=>"afdafa"}, "x"=>"50", "y"=>"10"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.6ms)[0m  [1mdescribe `requests`[0m
+  [1m[35mAREL (21.4ms)[0m  INSERT INTO `requests` (`fullname`, `email`, `price`, `details`, `created_at`, `updated_at`) VALUES ('Adam Miribyan', 'fsadfa', 5088, 'afdafa', '2011-01-17 15:30:03', '2011-01-17 15:30:03')
+  [1m[36mSQL (71.4ms)[0m  [1mCOMMIT[0m
+Rendered shared/_price-slider.html (1.0ms)
+Rendered requests/_form.html.haml (287.1ms)
+Rendered shared/_head.html.haml (9.9ms)
+Rendered shared/_flashes.html.haml (7.8ms)
+Rendered shared/_user_bar.html.haml (11.3ms)
+Rendered requests/new.html.haml within layouts/application (352.3ms)
+Completed 200 OK in 650ms (Views: 373.2ms | ActiveRecord: 95.2ms)
+
+
+Started GET "/check_for_new_requests.js?count=123" for 127.0.0.1 at 2011-01-17 18:30:06 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"123"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+  [1m[36mRequest Load (1.5ms)[0m  [1mSELECT `requests`.* FROM `requests`[0m
+Rendered requests/check_for_new_requests.js.haml (4.5ms)
+Completed 200 OK in 107ms (Views: 15.1ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/update_requests_count" for 127.0.0.1 at 2011-01-17 18:30:29 +0300
+  Processing by RequestsController#update_requests_count as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+  [1m[36mRequest Load (1.6ms)[0m  [1mSELECT `requests`.* FROM `requests`[0m
+Completed 406 Not Acceptable in 211ms
+
+
+Started GET "/update_requests_count.js" for 127.0.0.1 at 2011-01-17 18:30:32 +0300
+  Processing by RequestsController#update_requests_count as JS
+  [1m[35mUser Load (2.2ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+  [1m[36mRequest Load (1.6ms)[0m  [1mSELECT `requests`.* FROM `requests`[0m
+Rendered requests/update_requests_count.js.haml (2.7ms)
+Completed 200 OK in 155ms (Views: 22.1ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/check_for_new_requests.js?count=123" for 127.0.0.1 at 2011-01-17 18:30:47 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"123"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+  [1m[36mRequest Load (1.5ms)[0m  [1mSELECT `requests`.* FROM `requests`[0m
+Rendered requests/check_for_new_requests.js.haml (4.3ms)
+Completed 200 OK in 94ms (Views: 8.2ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/check_for_new_requests.js?count=123" for 127.0.0.1 at 2011-01-17 18:30:54 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"123"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+  [1m[36mRequest Load (1.6ms)[0m  [1mSELECT `requests`.* FROM `requests`[0m
+Rendered requests/check_for_new_requests.js.haml (4.3ms)
+Completed 200 OK in 113ms (Views: 8.4ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/requests" for 127.0.0.1 at 2011-01-17 18:31:35 +0300
+  Processing by RequestsController#index as HTML
+  [1m[35mUser Load (13.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+  [1m[36mRequest Load (0.5ms)[0m  [1mSELECT `requests`.* FROM `requests` ORDER BY requests.id DESC LIMIT 1[0m
+  [1m[35mRequest Load (4.1ms)[0m  SELECT `requests`.* FROM `requests` ORDER BY created_at desc
+Rendered shared/_head.html.haml (101.9ms)
+Rendered shared/_flashes.html.haml (8.0ms)
+Rendered shared/_user_bar.html.haml (12.6ms)
+Rendered requests/index.html.haml within layouts/application (338.1ms)
+Completed 200 OK in 634ms (Views: 353.7ms | ActiveRecord: 17.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-17 18:31:43 +0300
+  Processing by RequestsController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+Rendered shared/_price-slider.html (1.1ms)
+Rendered requests/_form.html.haml (268.4ms)
+Rendered shared/_head.html.haml (15.6ms)
+Rendered shared/_flashes.html.haml (4.3ms)
+Rendered shared/_user_bar.html.haml (19.9ms)
+Rendered requests/new.html.haml within layouts/application (342.3ms)
+Completed 200 OK in 476ms (Views: 357.7ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/requests" for 127.0.0.1 at 2011-01-17 18:31:47 +0300
+  Processing by RequestsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "request"=>{"fullname"=>"242", "price"=>"8000", "email"=>"242", "details"=>"342"}, "x"=>"78", "y"=>"9"}
+  [1m[35mUser Load (4.6ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+  [1m[36mSQL (6.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.6ms)[0m  describe `requests`
+  [1m[36mAREL (0.6ms)[0m  [1mINSERT INTO `requests` (`fullname`, `email`, `price`, `details`, `created_at`, `updated_at`) VALUES ('242', '242', 8000, '342', '2011-01-17 15:31:48', '2011-01-17 15:31:48')[0m
+  [1m[35mSQL (44.0ms)[0m  COMMIT
+Rendered shared/_price-slider.html (1.0ms)
+Rendered requests/_form.html.haml (226.1ms)
+Rendered shared/_head.html.haml (16.1ms)
+Rendered shared/_flashes.html.haml (5.6ms)
+Rendered shared/_user_bar.html.haml (18.6ms)
+Rendered requests/new.html.haml within layouts/application (298.2ms)
+Completed 200 OK in 583ms (Views: 315.9ms | ActiveRecord: 57.2ms)
+
+
+Started GET "/check_for_new_requests.js?count=124" for 127.0.0.1 at 2011-01-17 18:31:51 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"124"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.6ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/check_for_new_requests.js.haml (4.2ms)
+Completed 200 OK in 97ms (Views: 8.5ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/check_for_new_requests.js?count=124" for 127.0.0.1 at 2011-01-17 18:32:36 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"124"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.7ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/check_for_new_requests.js.haml (4.7ms)
+Completed 200 OK in 173ms (Views: 16.5ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/check_for_new_requests.js?count=124" for 127.0.0.1 at 2011-01-17 18:33:12 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"124"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.6ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/check_for_new_requests.js.haml (4.4ms)
+Completed 200 OK in 96ms (Views: 8.5ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/check_for_new_requests.js?count=124" for 127.0.0.1 at 2011-01-17 18:33:13 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"124"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.6ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/check_for_new_requests.js.haml (4.2ms)
+Completed 200 OK in 94ms (Views: 8.3ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/check_for_new_requests.js?count=124" for 127.0.0.1 at 2011-01-17 18:33:36 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"124"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.6ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/check_for_new_requests.js.haml (4.5ms)
+Completed 200 OK in 176ms (Views: 8.6ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/check_for_new_requests.js?count=124" for 127.0.0.1 at 2011-01-17 18:34:36 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"124"}
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.6ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/check_for_new_requests.js.haml (5.2ms)
+Completed 200 OK in 113ms (Views: 10.2ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/check_for_new_requests.js?count=124" for 127.0.0.1 at 2011-01-17 18:35:36 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"124"}
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.6ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/check_for_new_requests.js.haml (4.5ms)
+Completed 200 OK in 168ms (Views: 81.3ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/requests" for 127.0.0.1 at 2011-01-17 18:36:08 +0300
+  Processing by RequestsController#index as HTML
+  [1m[36mUser Load (8.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (0.6ms)[0m  SELECT `requests`.* FROM `requests` ORDER BY requests.id DESC LIMIT 1
+  [1m[36mRequest Load (2.5ms)[0m  [1mSELECT `requests`.* FROM `requests` ORDER BY created_at desc[0m
+Rendered shared/_head.html.haml (9.0ms)
+Rendered shared/_flashes.html.haml (11.0ms)
+Rendered shared/_user_bar.html.haml (13.2ms)
+Rendered requests/index.html.haml within layouts/application (253.2ms)
+Completed 200 OK in 477ms (Views: 268.3ms | ActiveRecord: 11.3ms)
+
+
+Started GET "/requests" for 127.0.0.1 at 2011-01-17 18:36:08 +0300
+  Processing by RequestsController#index as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+  [1m[36mRequest Load (0.6ms)[0m  [1mSELECT `requests`.* FROM `requests` ORDER BY requests.id DESC LIMIT 1[0m
+  [1m[35mRequest Load (2.4ms)[0m  SELECT `requests`.* FROM `requests` ORDER BY created_at desc
+Rendered shared/_head.html.haml (9.2ms)
+Rendered shared/_flashes.html.haml (7.8ms)
+Rendered shared/_user_bar.html.haml (12.5ms)
+Rendered requests/index.html.haml within layouts/application (259.0ms)
+Completed 200 OK in 403ms (Views: 276.6ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-17 18:36:15 +0300
+  Processing by RequestsController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+Rendered shared/_price-slider.html (3.0ms)
+Rendered requests/_form.html.haml (88.9ms)
+Rendered shared/_head.html.haml (8.7ms)
+Rendered shared/_flashes.html.haml (4.0ms)
+Rendered shared/_user_bar.html.haml (14.9ms)
+Rendered requests/new.html.haml within layouts/application (154.1ms)
+Completed 200 OK in 527ms (Views: 198.8ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/requests" for 127.0.0.1 at 2011-01-17 18:36:20 +0300
+  Processing by RequestsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "request"=>{"fullname"=>"fsafda", "price"=>"3944", "email"=>"asfdas", "details"=>"fsafa"}, "x"=>"59", "y"=>"18"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.7ms)[0m  describe `requests`
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO `requests` (`fullname`, `email`, `price`, `details`, `created_at`, `updated_at`) VALUES ('fsafda', 'asfdas', 3944, 'fsafa', '2011-01-17 15:36:20', '2011-01-17 15:36:20')[0m
+  [1m[35mSQL (66.5ms)[0m  COMMIT
+Rendered shared/_price-slider.html (1.1ms)
+Rendered requests/_form.html.haml (134.1ms)
+Rendered shared/_head.html.haml (23.9ms)
+Rendered shared/_flashes.html.haml (16.5ms)
+Rendered shared/_user_bar.html.haml (40.7ms)
+Rendered requests/new.html.haml within layouts/application (274.3ms)
+Completed 200 OK in 717ms (Views: 305.4ms | ActiveRecord: 69.6ms)
+
+
+Started GET "/check_for_new_requests.js?count=125" for 127.0.0.1 at 2011-01-17 18:36:23 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"125"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.7ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/check_for_new_requests.js.haml (6.4ms)
+Completed 200 OK in 186ms (Views: 10.7ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/check_for_new_requests.js?count=125" for 127.0.0.1 at 2011-01-17 18:37:09 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"125"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.6ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/check_for_new_requests.js.haml (4.4ms)
+Completed 200 OK in 99ms (Views: 9.8ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/check_for_new_requests.js?count=125" for 127.0.0.1 at 2011-01-17 18:38:09 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"125"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.6ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/check_for_new_requests.js.haml (4.2ms)
+Completed 200 OK in 95ms (Views: 8.3ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/check_for_new_requests.js?count=125" for 127.0.0.1 at 2011-01-17 18:39:09 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"125"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.6ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/check_for_new_requests.js.haml (12.8ms)
+Completed 200 OK in 148ms (Views: 16.8ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/requests" for 127.0.0.1 at 2011-01-17 18:39:53 +0300
+  Processing by RequestsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (0.5ms)[0m  SELECT `requests`.* FROM `requests` ORDER BY requests.id DESC LIMIT 1
+  [1m[36mRequest Load (2.6ms)[0m  [1mSELECT `requests`.* FROM `requests` ORDER BY created_at desc[0m
+Rendered shared/_head.html.haml (12.9ms)
+Rendered shared/_flashes.html.haml (4.4ms)
+Rendered shared/_user_bar.html.haml (16.2ms)
+Rendered requests/index.html.haml within layouts/application (341.6ms)
+Completed 200 OK in 496ms (Views: 358.8ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-17 18:39:59 +0300
+  Processing by RequestsController#new as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+Rendered shared/_price-slider.html (1.9ms)
+Rendered requests/_form.html.haml (174.0ms)
+Rendered shared/_head.html.haml (11.4ms)
+Rendered shared/_flashes.html.haml (4.2ms)
+Rendered shared/_user_bar.html.haml (15.5ms)
+Rendered requests/new.html.haml within layouts/application (239.8ms)
+Completed 200 OK in 493ms (Views: 282.1ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/requests" for 127.0.0.1 at 2011-01-17 18:40:05 +0300
+  Processing by RequestsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "request"=>{"fullname"=>"3422f2f", "price"=>"5452", "email"=>"fsdaf", "details"=>"asfas"}, "x"=>"62", "y"=>"10"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.8ms)[0m  [1mdescribe `requests`[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO `requests` (`fullname`, `email`, `price`, `details`, `created_at`, `updated_at`) VALUES ('3422f2f', 'fsdaf', 5452, 'asfas', '2011-01-17 15:40:05', '2011-01-17 15:40:05')
+  [1m[36mSQL (53.0ms)[0m  [1mCOMMIT[0m
+Rendered shared/_price-slider.html (1.1ms)
+Rendered requests/_form.html.haml (183.3ms)
+Rendered shared/_head.html.haml (16.6ms)
+Rendered shared/_flashes.html.haml (5.8ms)
+Rendered shared/_user_bar.html.haml (18.4ms)
+Rendered requests/new.html.haml within layouts/application (269.4ms)
+Completed 200 OK in 605ms (Views: 292.5ms | ActiveRecord: 56.1ms)
+
+
+Started GET "/check_for_new_requests.js?count=126" for 127.0.0.1 at 2011-01-17 18:40:08 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"126"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+  [1m[36mRequest Load (1.6ms)[0m  [1mSELECT `requests`.* FROM `requests`[0m
+Rendered requests/check_for_new_requests.js.haml (4.4ms)
+Completed 200 OK in 98ms (Views: 8.5ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/requests" for 127.0.0.1 at 2011-01-17 18:40:49 +0300
+  Processing by RequestsController#index as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+  [1m[36mRequest Load (0.5ms)[0m  [1mSELECT `requests`.* FROM `requests` ORDER BY requests.id DESC LIMIT 1[0m
+  [1m[35mRequest Load (2.5ms)[0m  SELECT `requests`.* FROM `requests` ORDER BY created_at desc
+Rendered shared/_head.html.haml (30.8ms)
+Rendered shared/_flashes.html.haml (8.2ms)
+Rendered shared/_user_bar.html.haml (34.7ms)
+Rendered requests/index.html.haml within layouts/application (481.2ms)
+Completed 200 OK in 734ms (Views: 582.8ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-17 18:41:01 +0300
+  Processing by RequestsController#new as HTML
+  [1m[36mUser Load (9.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+Rendered shared/_price-slider.html (1.1ms)
+Rendered requests/_form.html.haml (195.0ms)
+Rendered shared/_head.html.haml (10.6ms)
+Rendered shared/_flashes.html.haml (4.1ms)
+Rendered shared/_user_bar.html.haml (16.2ms)
+Rendered requests/new.html.haml within layouts/application (259.9ms)
+Completed 200 OK in 432ms (Views: 283.2ms | ActiveRecord: 9.5ms)
+
+
+Started POST "/requests" for 127.0.0.1 at 2011-01-17 18:41:07 +0300
+  Processing by RequestsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "request"=>{"fullname"=>"jhgjgjg", "price"=>"7012", "email"=>"jhgf", "details"=>"jgf"}, "x"=>"47", "y"=>"19"}
+  [1m[35mUser Load (1.1ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.7ms)[0m  describe `requests`
+  [1m[36mAREL (8.7ms)[0m  [1mINSERT INTO `requests` (`fullname`, `email`, `price`, `details`, `created_at`, `updated_at`) VALUES ('jhgjgjg', 'jhgf', 7012, 'jgf', '2011-01-17 15:41:08', '2011-01-17 15:41:08')[0m
+  [1m[35mSQL (34.9ms)[0m  COMMIT
+Rendered shared/_price-slider.html (1.1ms)
+Rendered requests/_form.html.haml (239.2ms)
+Rendered shared/_head.html.haml (12.2ms)
+Rendered shared/_flashes.html.haml (5.5ms)
+Rendered shared/_user_bar.html.haml (16.9ms)
+Rendered requests/new.html.haml within layouts/application (323.7ms)
+Completed 200 OK in 647ms (Views: 354.9ms | ActiveRecord: 46.6ms)
+
+
+Started GET "/check_for_new_requests.js?count=127" for 127.0.0.1 at 2011-01-17 18:41:10 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"127"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.6ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/check_for_new_requests.js.haml (6.0ms)
+Completed 200 OK in 100ms (Views: 10.2ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/check_for_new_requests.js?count=127" for 127.0.0.1 at 2011-01-17 18:41:50 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"127"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.6ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/check_for_new_requests.js.haml (4.5ms)
+Completed 200 OK in 172ms (Views: 8.8ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/check_for_new_requests.js?count=127" for 127.0.0.1 at 2011-01-17 18:42:50 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"127"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.6ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/check_for_new_requests.js.haml (8.1ms)
+Completed 200 OK in 119ms (Views: 13.4ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/check_for_new_requests.js?count=127" for 127.0.0.1 at 2011-01-17 18:43:02 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"127"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (2.9ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/check_for_new_requests.js.haml (4.8ms)
+Completed 200 OK in 221ms (Views: 13.1ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/check_for_new_requests.js?count=127" for 127.0.0.1 at 2011-01-17 18:43:09 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"127"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.6ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/check_for_new_requests.js.haml (4.8ms)
+Completed 200 OK in 121ms (Views: 9.0ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/check_for_new_requests.js?count=127" for 127.0.0.1 at 2011-01-17 18:43:13 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"127"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (10.2ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/check_for_new_requests.js.haml (6.6ms)
+Completed 200 OK in 151ms (Views: 12.2ms | ActiveRecord: 10.9ms)
+
+
+Started GET "/check_for_new_requests.js?count=127" for 127.0.0.1 at 2011-01-17 18:43:18 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"127"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.6ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/check_for_new_requests.js.haml (4.6ms)
+Completed 200 OK in 219ms (Views: 8.8ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/check_for_new_requests.js?count=127" for 127.0.0.1 at 2011-01-17 18:43:50 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"127"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.7ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/check_for_new_requests.js.haml (4.5ms)
+Completed 200 OK in 100ms (Views: 8.6ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/requests" for 127.0.0.1 at 2011-01-17 18:44:06 +0300
+  Processing by RequestsController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (0.7ms)[0m  SELECT `requests`.* FROM `requests` ORDER BY requests.id DESC LIMIT 1
+  [1m[36mRequest Load (10.9ms)[0m  [1mSELECT `requests`.* FROM `requests` ORDER BY created_at desc[0m
+Rendered shared/_head.html.haml (13.9ms)
+Rendered shared/_flashes.html.haml (4.1ms)
+Rendered shared/_user_bar.html.haml (11.8ms)
+Rendered requests/index.html.haml within layouts/application (319.8ms)
+Completed 200 OK in 887ms (Views: 369.8ms | ActiveRecord: 12.5ms)
+
+
+Started GET "/requests" for 127.0.0.1 at 2011-01-17 18:44:07 +0300
+  Processing by RequestsController#index as HTML
+  [1m[35mUser Load (0.8ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+  [1m[36mRequest Load (4.4ms)[0m  [1mSELECT `requests`.* FROM `requests` ORDER BY requests.id DESC LIMIT 1[0m
+  [1m[35mRequest Load (2.4ms)[0m  SELECT `requests`.* FROM `requests` ORDER BY created_at desc
+Rendered shared/_head.html.haml (10.4ms)
+Rendered shared/_flashes.html.haml (4.8ms)
+Rendered shared/_user_bar.html.haml (16.3ms)
+Rendered requests/index.html.haml within layouts/application (364.8ms)
+Completed 200 OK in 510ms (Views: 379.7ms | ActiveRecord: 7.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-17 18:44:12 +0300
+  Processing by RequestsController#new as HTML
+  [1m[36mUser Load (6.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+Rendered shared/_price-slider.html (1.1ms)
+Rendered requests/_form.html.haml (243.1ms)
+Rendered shared/_head.html.haml (10.6ms)
+Rendered shared/_flashes.html.haml (11.0ms)
+Rendered shared/_user_bar.html.haml (12.9ms)
+Rendered requests/new.html.haml within layouts/application (323.2ms)
+Completed 200 OK in 552ms (Views: 358.0ms | ActiveRecord: 6.5ms)
+
+
+Started POST "/requests" for 127.0.0.1 at 2011-01-17 18:44:17 +0300
+  Processing by RequestsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "request"=>{"fullname"=>"uytu", "price"=>"5608", "email"=>"uytu", "details"=>"tyut"}, "x"=>"50", "y"=>"16"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+  [1m[36mSQL (10.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (12.5ms)[0m  describe `requests`
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO `requests` (`fullname`, `email`, `price`, `details`, `created_at`, `updated_at`) VALUES ('uytu', 'uytu', 5608, 'tyut', '2011-01-17 15:44:17', '2011-01-17 15:44:17')[0m
+  [1m[35mSQL (49.7ms)[0m  COMMIT
+Rendered shared/_price-slider.html (4.9ms)
+Rendered requests/_form.html.haml (219.9ms)
+Rendered shared/_head.html.haml (10.6ms)
+Rendered shared/_flashes.html.haml (8.3ms)
+Rendered shared/_user_bar.html.haml (11.6ms)
+Rendered requests/new.html.haml within layouts/application (297.3ms)
+Completed 200 OK in 585ms (Views: 324.5ms | ActiveRecord: 73.4ms)
+
+
+Started GET "/check_for_new_requests.js?count=128" for 127.0.0.1 at 2011-01-17 18:44:20 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"128"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.6ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/check_for_new_requests.js.haml (4.5ms)
+Completed 200 OK in 102ms (Views: 8.9ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/check_for_new_requests.js?count=128" for 127.0.0.1 at 2011-01-17 18:45:08 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"128"}
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.6ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/check_for_new_requests.js.haml (5.2ms)
+Completed 200 OK in 179ms (Views: 9.4ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/check_for_new_requests.js?count=128" for 127.0.0.1 at 2011-01-17 18:46:08 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"128"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.8ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/check_for_new_requests.js.haml (4.9ms)
+Completed 200 OK in 111ms (Views: 19.8ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/check_for_new_requests.js?count=128" for 127.0.0.1 at 2011-01-17 18:47:08 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"128"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.6ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/check_for_new_requests.js.haml (5.4ms)
+Completed 200 OK in 175ms (Views: 86.0ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/check_for_new_requests.js?count=128" for 127.0.0.1 at 2011-01-17 18:48:08 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"128"}
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.6ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/check_for_new_requests.js.haml (4.6ms)
+Completed 200 OK in 103ms (Views: 9.0ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/check_for_new_requests.js?count=128" for 127.0.0.1 at 2011-01-17 18:49:08 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"128"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.9ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/check_for_new_requests.js.haml (4.7ms)
+Completed 200 OK in 100ms (Views: 8.9ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/check_for_new_requests.js?count=128" for 127.0.0.1 at 2011-01-17 18:50:08 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"128"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.6ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/check_for_new_requests.js.haml (4.9ms)
+Completed 200 OK in 189ms (Views: 8.9ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/check_for_new_requests.js?count=128" for 127.0.0.1 at 2011-01-17 18:51:08 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"128"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.7ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/check_for_new_requests.js.haml (4.9ms)
+Completed 200 OK in 100ms (Views: 9.0ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/check_for_new_requests.js?count=128" for 127.0.0.1 at 2011-01-17 18:52:08 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"128"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.6ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/check_for_new_requests.js.haml (5.1ms)
+Completed 200 OK in 184ms (Views: 11.1ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/check_for_new_requests.js?count=128" for 127.0.0.1 at 2011-01-17 18:53:08 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"128"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.6ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/check_for_new_requests.js.haml (4.5ms)
+Completed 200 OK in 102ms (Views: 8.7ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/check_for_new_requests.js?count=128" for 127.0.0.1 at 2011-01-17 18:54:08 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"128"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.8ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/check_for_new_requests.js.haml (4.4ms)
+Completed 200 OK in 100ms (Views: 8.7ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/check_for_new_requests.js?count=128" for 127.0.0.1 at 2011-01-17 18:55:08 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"128"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.6ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/check_for_new_requests.js.haml (4.5ms)
+Completed 200 OK in 189ms (Views: 8.7ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/check_for_new_requests.js?count=128" for 127.0.0.1 at 2011-01-17 18:56:08 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"128"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.6ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/check_for_new_requests.js.haml (4.5ms)
+Completed 200 OK in 101ms (Views: 8.7ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/check_for_new_requests.js?count=128" for 127.0.0.1 at 2011-01-17 18:57:08 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"128"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.6ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/check_for_new_requests.js.haml (5.2ms)
+Completed 200 OK in 183ms (Views: 19.5ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/check_for_new_requests.js?count=128" for 127.0.0.1 at 2011-01-17 18:58:08 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"128"}
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.6ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/check_for_new_requests.js.haml (5.0ms)
+Completed 200 OK in 177ms (Views: 22.0ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/check_for_new_requests.js?count=128" for 127.0.0.1 at 2011-01-17 18:59:08 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"128"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.6ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/check_for_new_requests.js.haml (4.4ms)
+Completed 200 OK in 100ms (Views: 8.7ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/check_for_new_requests.js?count=128" for 127.0.0.1 at 2011-01-17 19:00:08 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"128"}
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.8ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/check_for_new_requests.js.haml (8.1ms)
+Completed 200 OK in 245ms (Views: 18.6ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/requests" for 127.0.0.1 at 2011-01-17 19:00:50 +0300
+  Processing by RequestsController#index as HTML
+  [1m[36mUser Load (6.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (20.2ms)[0m  SELECT `requests`.* FROM `requests` ORDER BY requests.id DESC LIMIT 1
+  [1m[36mRequest Load (41.9ms)[0m  [1mSELECT `requests`.* FROM `requests` ORDER BY created_at desc[0m
+Rendered shared/_head.html.haml (182.8ms)
+Rendered shared/_flashes.html.haml (5.7ms)
+Rendered shared/_user_bar.html.haml (13.4ms)
+Rendered requests/index.html.haml within layouts/application (505.8ms)
+Completed 200 OK in 959ms (Views: 561.6ms | ActiveRecord: 68.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-17 19:00:57 +0300
+  Processing by RequestsController#new as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+Rendered shared/_price-slider.html (1.1ms)
+Rendered requests/_form.html.haml (253.8ms)
+Rendered shared/_head.html.haml (9.6ms)
+Rendered shared/_flashes.html.haml (8.9ms)
+Rendered shared/_user_bar.html.haml (16.4ms)
+Rendered requests/new.html.haml within layouts/application (355.6ms)
+Completed 200 OK in 515ms (Views: 384.7ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/requests" for 127.0.0.1 at 2011-01-17 19:01:02 +0300
+  Processing by RequestsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "request"=>{"fullname"=>"fsafda", "price"=>"4568", "email"=>"fasfs", "details"=>"afafa"}, "x"=>"33", "y"=>"1"}
+  [1m[36mUser Load (1.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mSQL (9.0ms)[0m  BEGIN
+  [1m[36mSQL (8.4ms)[0m  [1mdescribe `requests`[0m
+  [1m[35mAREL (61.5ms)[0m  INSERT INTO `requests` (`fullname`, `email`, `price`, `details`, `created_at`, `updated_at`) VALUES ('fsafda', 'fasfs', 4568, 'afafa', '2011-01-17 16:01:02', '2011-01-17 16:01:02')
+  [1m[36mSQL (71.4ms)[0m  [1mCOMMIT[0m
+Rendered shared/_price-slider.html (1.1ms)
+Rendered requests/_form.html.haml (168.9ms)
+Rendered shared/_head.html.haml (14.6ms)
+Rendered shared/_flashes.html.haml (5.0ms)
+Rendered shared/_user_bar.html.haml (17.8ms)
+Rendered requests/new.html.haml within layouts/application (235.8ms)
+Completed 200 OK in 720ms (Views: 259.2ms | ActiveRecord: 151.9ms)
+
+
+Started GET "/check_for_new_requests.js?count=129" for 127.0.0.1 at 2011-01-17 19:01:06 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"129"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+  [1m[36mRequest Load (2.0ms)[0m  [1mSELECT `requests`.* FROM `requests`[0m
+Rendered requests/check_for_new_requests.js.haml (4.8ms)
+Completed 200 OK in 104ms (Views: 9.1ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/check_for_new_requests.js?count=129" for 127.0.0.1 at 2011-01-17 19:01:53 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"129"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+  [1m[36mRequest Load (1.6ms)[0m  [1mSELECT `requests`.* FROM `requests`[0m
+Rendered requests/check_for_new_requests.js.haml (4.4ms)
+Completed 200 OK in 100ms (Views: 8.9ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/check_for_new_requests.js?count=129" for 127.0.0.1 at 2011-01-17 19:02:29 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"129"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+  [1m[36mRequest Load (1.6ms)[0m  [1mSELECT `requests`.* FROM `requests`[0m
+Rendered requests/check_for_new_requests.js.haml (5.1ms)
+Completed 200 OK in 103ms (Views: 9.1ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/check_for_new_requests.js?count=129" for 127.0.0.1 at 2011-01-17 19:02:31 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"129"}
+  [1m[35mUser Load (0.8ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+  [1m[36mRequest Load (1.6ms)[0m  [1mSELECT `requests`.* FROM `requests`[0m
+Rendered requests/check_for_new_requests.js.haml (6.8ms)
+Completed 200 OK in 176ms (Views: 11.1ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/check_for_new_requests.js?count=129" for 127.0.0.1 at 2011-01-17 19:02:33 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"129"}
+  [1m[35mUser Load (0.8ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+  [1m[36mRequest Load (1.6ms)[0m  [1mSELECT `requests`.* FROM `requests`[0m
+Rendered requests/check_for_new_requests.js.haml (4.5ms)
+Completed 200 OK in 221ms (Views: 10.5ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/check_for_new_requests.js?count=129" for 127.0.0.1 at 2011-01-17 19:02:36 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"129"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+  [1m[36mRequest Load (1.9ms)[0m  [1mSELECT `requests`.* FROM `requests`[0m
+Rendered requests/check_for_new_requests.js.haml (4.5ms)
+Completed 200 OK in 101ms (Views: 8.7ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/check_for_new_requests.js?count=129" for 127.0.0.1 at 2011-01-17 19:02:38 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"129"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+  [1m[36mRequest Load (1.7ms)[0m  [1mSELECT `requests`.* FROM `requests`[0m
+Rendered requests/check_for_new_requests.js.haml (4.5ms)
+Completed 200 OK in 102ms (Views: 8.8ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/check_for_new_requests.js?count=129" for 127.0.0.1 at 2011-01-17 19:02:38 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"129"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+  [1m[36mRequest Load (1.6ms)[0m  [1mSELECT `requests`.* FROM `requests`[0m
+Rendered requests/check_for_new_requests.js.haml (4.4ms)
+Completed 200 OK in 104ms (Views: 8.9ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/check_for_new_requests.js?count=129" for 127.0.0.1 at 2011-01-17 19:02:53 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"129"}
+  [1m[35mUser Load (2.5ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+  [1m[36mRequest Load (1.8ms)[0m  [1mSELECT `requests`.* FROM `requests`[0m
+Rendered requests/check_for_new_requests.js.haml (9.4ms)
+Completed 200 OK in 169ms (Views: 27.5ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/requests" for 127.0.0.1 at 2011-01-17 19:03:28 +0300
+  Processing by RequestsController#index as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+  [1m[36mRequest Load (4.4ms)[0m  [1mSELECT `requests`.* FROM `requests` ORDER BY requests.id DESC LIMIT 1[0m
+  [1m[35mRequest Load (4.7ms)[0m  SELECT `requests`.* FROM `requests` ORDER BY created_at desc
+Rendered shared/_head.html.haml (15.8ms)
+Rendered shared/_flashes.html.haml (4.3ms)
+Rendered shared/_user_bar.html.haml (16.0ms)
+Rendered requests/index.html.haml within layouts/application (283.6ms)
+Completed 200 OK in 608ms (Views: 321.1ms | ActiveRecord: 9.8ms)
+
+
+Started GET "/requests" for 127.0.0.1 at 2011-01-17 19:03:29 +0300
+  Processing by RequestsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.3ms)[0m  SELECT `requests`.* FROM `requests` ORDER BY requests.id DESC LIMIT 1
+  [1m[36mRequest Load (2.7ms)[0m  [1mSELECT `requests`.* FROM `requests` ORDER BY created_at desc[0m
+Rendered shared/_head.html.haml (31.1ms)
+Rendered shared/_flashes.html.haml (10.0ms)
+Rendered shared/_user_bar.html.haml (20.1ms)
+Rendered requests/index.html.haml within layouts/application (385.3ms)
+Completed 200 OK in 629ms (Views: 404.0ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-17 19:03:32 +0300
+  Processing by RequestsController#new as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+Rendered shared/_price-slider.html (1.2ms)
+Rendered requests/_form.html.haml (179.0ms)
+Rendered shared/_head.html.haml (10.2ms)
+Rendered shared/_flashes.html.haml (9.3ms)
+Rendered shared/_user_bar.html.haml (11.7ms)
+Rendered requests/new.html.haml within layouts/application (253.3ms)
+Completed 200 OK in 416ms (Views: 278.7ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/requests" for 127.0.0.1 at 2011-01-17 19:03:39 +0300
+  Processing by RequestsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "request"=>{"fullname"=>"2342342", "price"=>"5140", "email"=>"fasfda", "details"=>"fsafsa"}, "x"=>"30", "y"=>"17"}
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mSQL (12.8ms)[0m  BEGIN
+  [1m[36mSQL (8.2ms)[0m  [1mdescribe `requests`[0m
+  [1m[35mAREL (81.9ms)[0m  INSERT INTO `requests` (`fullname`, `email`, `price`, `details`, `created_at`, `updated_at`) VALUES ('2342342', 'fasfda', 5140, 'fsafsa', '2011-01-17 16:03:39', '2011-01-17 16:03:39')
+  [1m[36mSQL (40.5ms)[0m  [1mCOMMIT[0m
+Rendered shared/_price-slider.html (1.4ms)
+Rendered requests/_form.html.haml (166.5ms)
+Rendered shared/_head.html.haml (11.5ms)
+Rendered shared/_flashes.html.haml (4.4ms)
+Rendered shared/_user_bar.html.haml (12.9ms)
+Rendered requests/new.html.haml within layouts/application (239.0ms)
+Completed 200 OK in 661ms (Views: 255.7ms | ActiveRecord: 144.3ms)
+
+
+Started GET "/check_for_new_requests.js?count=130" for 127.0.0.1 at 2011-01-17 19:03:48 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"130"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+  [1m[36mRequest Load (1.6ms)[0m  [1mSELECT `requests`.* FROM `requests`[0m
+Rendered requests/check_for_new_requests.js.haml (3.4ms)
+Completed   in 106ms
+
+ActionView::Template::Error (Inconsistent indentation: 6 spaces were used for indentation, but the rest of the document was indented using 4 spaces.):
+    4:     %span.empty= t("app.requests.no_new_requests")
+    5:     
+    6:     :javascript
+    7:       $(".full").click(function(){
+    8:           $("#shown_requests_count").load('/update_requests_count.js');
+    9:           $.get('/fetch_new_requests.js?count=' + current_count, function(data) {
+    10:             $("tbody").prepend(data);
+  app/views/requests/check_for_new_requests.js.haml:7
+  app/controllers/requests_controller.rb:24:in `block (2 levels) in check_for_new_requests'
+  app/controllers/requests_controller.rb:23:in `check_for_new_requests'
+
+Rendered /home/adam/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.2ms)
+  [1m[35mSQL (147.4ms)[0m  SHOW TABLES
+Rendered /home/adam/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (160.2ms)
+Rendered /home/adam/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (211.8ms)
+
+
+Started GET "/check_for_new_requests.js?count=130" for 127.0.0.1 at 2011-01-17 19:03:52 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"130"}
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.8ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/check_for_new_requests.js.haml (3.6ms)
+Completed   in 101ms
+
+ActionView::Template::Error (Inconsistent indentation: 6 spaces were used for indentation, but the rest of the document was indented using 4 spaces.):
+    4:     %span.empty= t("app.requests.no_new_requests")
+    5:     
+    6:     :javascript
+    7:       $(".full").click(function(){
+    8:           $("#shown_requests_count").load('/update_requests_count.js');
+    9:           $.get('/fetch_new_requests.js?count=' + current_count, function(data) {
+    10:             $("tbody").prepend(data);
+  app/views/requests/check_for_new_requests.js.haml:7
+  app/controllers/requests_controller.rb:24:in `block (2 levels) in check_for_new_requests'
+  app/controllers/requests_controller.rb:23:in `check_for_new_requests'
+
+Rendered /home/adam/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.2ms)
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+Rendered /home/adam/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (14.0ms)
+Rendered /home/adam/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (27.5ms)
+
+
+Started GET "/check_for_new_requests.js?count=130" for 127.0.0.1 at 2011-01-17 19:03:59 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"130"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+  [1m[36mRequest Load (1.6ms)[0m  [1mSELECT `requests`.* FROM `requests`[0m
+Rendered requests/check_for_new_requests.js.haml (3.6ms)
+Completed   in 120ms
+
+ActionView::Template::Error (Inconsistent indentation: 6 spaces were used for indentation, but the rest of the document was indented using 4 spaces.):
+    4:     %span.empty= t("app.requests.no_new_requests")
+    5:     
+    6:     :javascript
+    7:       $(".full").click(function(){
+    8:           $("#shown_requests_count").load('/update_requests_count.js');
+    9:           $.get('/fetch_new_requests.js?count=' + current_count, function(data) {
+    10:             $("tbody").prepend(data);
+  app/views/requests/check_for_new_requests.js.haml:7
+  app/controllers/requests_controller.rb:24:in `block (2 levels) in check_for_new_requests'
+  app/controllers/requests_controller.rb:23:in `check_for_new_requests'
+
+Rendered /home/adam/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (78.7ms)
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+Rendered /home/adam/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (13.9ms)
+Rendered /home/adam/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (102.7ms)
+
+
+Started GET "/check_for_new_requests.js?count=130" for 127.0.0.1 at 2011-01-17 19:04:30 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"130"}
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.7ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/check_for_new_requests.js.haml (3.4ms)
+Completed   in 102ms
+
+ActionView::Template::Error (Inconsistent indentation: 6 spaces were used for indentation, but the rest of the document was indented using 4 spaces.):
+    4:     %span.empty= t("app.requests.no_new_requests")
+    5:     
+    6:     :javascript
+    7:       $(".full").click(function(){
+    8:           $("#shown_requests_count").load('/update_requests_count.js');
+    9:           $.get('/fetch_new_requests.js?count=' + current_count, function(data) {
+    10:             $("tbody").prepend(data);
+  app/views/requests/check_for_new_requests.js.haml:7
+  app/controllers/requests_controller.rb:24:in `block (2 levels) in check_for_new_requests'
+  app/controllers/requests_controller.rb:23:in `check_for_new_requests'
+
+Rendered /home/adam/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.7ms)
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+Rendered /home/adam/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (13.3ms)
+Rendered /home/adam/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (26.3ms)
+
+
+Started GET "/check_for_new_requests.js?count=130" for 127.0.0.1 at 2011-01-17 19:05:30 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"130"}
+  [1m[35mUser Load (0.8ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+  [1m[36mRequest Load (1.7ms)[0m  [1mSELECT `requests`.* FROM `requests`[0m
+Rendered requests/check_for_new_requests.js.haml (3.3ms)
+Completed   in 175ms
+
+ActionView::Template::Error (Inconsistent indentation: 6 spaces were used for indentation, but the rest of the document was indented using 4 spaces.):
+    4:     %span.empty= t("app.requests.no_new_requests")
+    5:     
+    6:     :javascript
+    7:       $(".full").click(function(){
+    8:           $("#shown_requests_count").load('/update_requests_count.js');
+    9:           $.get('/fetch_new_requests.js?count=' + current_count, function(data) {
+    10:             $("tbody").prepend(data);
+  app/views/requests/check_for_new_requests.js.haml:7
+  app/controllers/requests_controller.rb:24:in `block (2 levels) in check_for_new_requests'
+  app/controllers/requests_controller.rb:23:in `check_for_new_requests'
+
+Rendered /home/adam/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.8ms)
+  [1m[35mSQL (12.0ms)[0m  SHOW TABLES
+Rendered /home/adam/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (24.8ms)
+Rendered /home/adam/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (38.5ms)
+
+
+Started GET "/check_for_new_requests.js?count=130" for 127.0.0.1 at 2011-01-17 19:06:30 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"130"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.6ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/check_for_new_requests.js.haml (3.2ms)
+Completed   in 102ms
+
+ActionView::Template::Error (Inconsistent indentation: 6 spaces were used for indentation, but the rest of the document was indented using 4 spaces.):
+    4:     %span.empty= t("app.requests.no_new_requests")
+    5:     
+    6:     :javascript
+    7:       $(".full").click(function(){
+    8:           $("#shown_requests_count").load('/update_requests_count.js');
+    9:           $.get('/fetch_new_requests.js?count=' + current_count, function(data) {
+    10:             $("tbody").prepend(data);
+  app/views/requests/check_for_new_requests.js.haml:7
+  app/controllers/requests_controller.rb:24:in `block (2 levels) in check_for_new_requests'
+  app/controllers/requests_controller.rb:23:in `check_for_new_requests'
+
+Rendered /home/adam/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.9ms)
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+Rendered /home/adam/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (13.5ms)
+Rendered /home/adam/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (26.3ms)
+
+
+Started GET "/requests" for 127.0.0.1 at 2011-01-17 19:07:11 +0300
+  Processing by RequestsController#index as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+  [1m[36mRequest Load (18.2ms)[0m  [1mSELECT `requests`.* FROM `requests` ORDER BY requests.id DESC LIMIT 1[0m
+  [1m[35mRequest Load (38.8ms)[0m  SELECT `requests`.* FROM `requests` ORDER BY created_at desc
+Rendered shared/_head.html.haml (17.0ms)
+Rendered shared/_flashes.html.haml (4.3ms)
+Rendered shared/_user_bar.html.haml (17.3ms)
+Rendered requests/index.html.haml within layouts/application (340.9ms)
+Completed 200 OK in 694ms (Views: 396.2ms | ActiveRecord: 57.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-17 19:07:19 +0300
+  Processing by RequestsController#new as HTML
+  [1m[36mUser Load (15.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+Rendered shared/_price-slider.html (1.1ms)
+Rendered requests/_form.html.haml (93.5ms)
+Rendered shared/_head.html.haml (11.2ms)
+Rendered shared/_flashes.html.haml (4.4ms)
+Rendered shared/_user_bar.html.haml (21.1ms)
+Rendered requests/new.html.haml within layouts/application (190.1ms)
+Completed 200 OK in 647ms (Views: 224.7ms | ActiveRecord: 15.5ms)
+
+
+Started POST "/requests" for 127.0.0.1 at 2011-01-17 19:07:24 +0300
+  Processing by RequestsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "request"=>{"fullname"=>"4535435345", "price"=>"8000", "email"=>"345353", "details"=>"453"}, "x"=>"62", "y"=>"13"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+  [1m[36mSQL (9.8ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (11.9ms)[0m  describe `requests`
+  [1m[36mAREL (64.2ms)[0m  [1mINSERT INTO `requests` (`fullname`, `email`, `price`, `details`, `created_at`, `updated_at`) VALUES ('4535435345', '345353', 8000, '453', '2011-01-17 16:07:25', '2011-01-17 16:07:25')[0m
+  [1m[35mSQL (55.3ms)[0m  COMMIT
+Rendered shared/_price-slider.html (1.1ms)
+Rendered requests/_form.html.haml (75.4ms)
+Rendered shared/_head.html.haml (11.2ms)
+Rendered shared/_flashes.html.haml (5.8ms)
+Rendered shared/_user_bar.html.haml (14.5ms)
+Rendered requests/new.html.haml within layouts/application (145.8ms)
+Completed 200 OK in 751ms (Views: 163.4ms | ActiveRecord: 141.9ms)
+
+
+Started GET "/check_for_new_requests.js?count=131" for 127.0.0.1 at 2011-01-17 19:07:27 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"131"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.8ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/check_for_new_requests.js.haml (4.1ms)
+Completed   in 103ms
+
+ActionView::Template::Error (Inconsistent indentation: 6 spaces were used for indentation, but the rest of the document was indented using 4 spaces.):
+    4:     %span.empty= t("app.requests.no_new_requests")
+    5:     
+    6:     :javascript
+    7:       $(".full").click(function(){
+    8:         $("#shown_requests_count").load('/update_requests_count.js');
+    9:           $.get('/fetch_new_requests.js?count=' + current_count, function(data) {
+    10:             $("tbody").prepend(data);
+  app/views/requests/check_for_new_requests.js.haml:7
+  app/controllers/requests_controller.rb:24:in `block (2 levels) in check_for_new_requests'
+  app/controllers/requests_controller.rb:23:in `check_for_new_requests'
+
+Rendered /home/adam/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.8ms)
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+Rendered /home/adam/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (14.7ms)
+Rendered /home/adam/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (28.6ms)
+
+
+Started GET "/check_for_new_requests.js?count=131" for 127.0.0.1 at 2011-01-17 19:08:08 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"131"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+  [1m[36mRequest Load (1.6ms)[0m  [1mSELECT `requests`.* FROM `requests`[0m
+Rendered requests/check_for_new_requests.js.haml (3.6ms)
+Completed   in 104ms
+
+ActionView::Template::Error (Inconsistent indentation: 6 spaces were used for indentation, but the rest of the document was indented using 4 spaces.):
+    4:     %span.empty= t("app.requests.no_new_requests")
+    5:     
+    6:     :javascript
+    7:       $(".full").click(function(){
+    8:         $("#shown_requests_count").load('/update_requests_count.js');
+    9:         $.get('/fetch_new_requests.js?count=' + current_count, function(data) {
+    10:           $("tbody").prepend(data);
+  app/views/requests/check_for_new_requests.js.haml:7
+  app/controllers/requests_controller.rb:24:in `block (2 levels) in check_for_new_requests'
+  app/controllers/requests_controller.rb:23:in `check_for_new_requests'
+
+Rendered /home/adam/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.8ms)
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+Rendered /home/adam/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (14.1ms)
+Rendered /home/adam/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (27.1ms)
+
+
+Started GET "/check_for_new_requests.js?count=131" for 127.0.0.1 at 2011-01-17 19:08:11 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"131"}
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.6ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/check_for_new_requests.js.haml (9.3ms)
+Completed   in 185ms
+
+ActionView::Template::Error (Inconsistent indentation: 6 spaces were used for indentation, but the rest of the document was indented using 4 spaces.):
+    4:     %span.empty= t("app.requests.no_new_requests")
+    5:     
+    6:     :javascript
+    7:       $(".full").click(function(){
+    8:         $("#shown_requests_count").load('/update_requests_count.js');
+    9:         $.get('/fetch_new_requests.js?count=' + current_count, function(data) {
+    10:           $("tbody").prepend(data);
+  app/views/requests/check_for_new_requests.js.haml:7
+  app/controllers/requests_controller.rb:24:in `block (2 levels) in check_for_new_requests'
+  app/controllers/requests_controller.rb:23:in `check_for_new_requests'
+
+Rendered /home/adam/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.4ms)
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+Rendered /home/adam/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (16.2ms)
+Rendered /home/adam/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (45.9ms)
+
+
+Started GET "/check_for_new_requests.js?count=131" for 127.0.0.1 at 2011-01-17 19:08:12 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"131"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+  [1m[36mRequest Load (1.9ms)[0m  [1mSELECT `requests`.* FROM `requests`[0m
+Rendered requests/check_for_new_requests.js.haml (3.5ms)
+Completed   in 116ms
+
+ActionView::Template::Error (Inconsistent indentation: 6 spaces were used for indentation, but the rest of the document was indented using 4 spaces.):
+    4:     %span.empty= t("app.requests.no_new_requests")
+    5:     
+    6:     :javascript
+    7:       $(".full").click(function(){
+    8:         $("#shown_requests_count").load('/update_requests_count.js');
+    9:         $.get('/fetch_new_requests.js?count=' + current_count, function(data) {
+    10:           $("tbody").prepend(data);
+  app/views/requests/check_for_new_requests.js.haml:7
+  app/controllers/requests_controller.rb:24:in `block (2 levels) in check_for_new_requests'
+  app/controllers/requests_controller.rb:23:in `check_for_new_requests'
+
+Rendered /home/adam/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.0ms)
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+Rendered /home/adam/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (16.5ms)
+Rendered /home/adam/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (31.1ms)
+
+
+Started GET "/check_for_new_requests.js?count=131" for 127.0.0.1 at 2011-01-17 19:09:12 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"131"}
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.7ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/check_for_new_requests.js.haml (3.3ms)
+Completed   in 190ms
+
+ActionView::Template::Error (Inconsistent indentation: 6 spaces were used for indentation, but the rest of the document was indented using 4 spaces.):
+    4:     %span.empty= t("app.requests.no_new_requests")
+    5:     
+    6:     :javascript
+    7:       $(".full").click(function(){
+    8:         $("#shown_requests_count").load('/update_requests_count.js');
+    9:         $.get('/fetch_new_requests.js?count=' + current_count, function(data) {
+    10:           $("tbody").prepend(data);
+  app/views/requests/check_for_new_requests.js.haml:7
+  app/controllers/requests_controller.rb:24:in `block (2 levels) in check_for_new_requests'
+  app/controllers/requests_controller.rb:23:in `check_for_new_requests'
+
+Rendered /home/adam/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.9ms)
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+Rendered /home/adam/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (13.6ms)
+Rendered /home/adam/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (26.8ms)
+
+
+Started GET "/check_for_new_requests.js?count=131" for 127.0.0.1 at 2011-01-17 19:10:12 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"131"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+  [1m[36mRequest Load (1.7ms)[0m  [1mSELECT `requests`.* FROM `requests`[0m
+Rendered requests/check_for_new_requests.js.haml (4.4ms)
+Completed 200 OK in 103ms (Views: 8.6ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/check_for_new_requests.js?count=131" for 127.0.0.1 at 2011-01-17 19:11:12 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"131"}
+  [1m[35mUser Load (16.1ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+  [1m[36mRequest Load (1.8ms)[0m  [1mSELECT `requests`.* FROM `requests`[0m
+Rendered requests/check_for_new_requests.js.haml (15.1ms)
+Completed 200 OK in 470ms (Views: 28.5ms | ActiveRecord: 17.8ms)
+
+
+Started GET "/requests" for 127.0.0.1 at 2011-01-17 19:11:16 +0300
+  Processing by RequestsController#index as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+  [1m[36mRequest Load (21.2ms)[0m  [1mSELECT `requests`.* FROM `requests` ORDER BY requests.id DESC LIMIT 1[0m
+  [1m[35mRequest Load (37.7ms)[0m  SELECT `requests`.* FROM `requests` ORDER BY created_at desc
+Rendered shared/_head.html.haml (11.1ms)
+Rendered shared/_flashes.html.haml (4.9ms)
+Rendered shared/_user_bar.html.haml (149.7ms)
+Rendered requests/index.html.haml within layouts/application (437.6ms)
+Completed 200 OK in 755ms (Views: 475.5ms | ActiveRecord: 59.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-17 19:11:20 +0300
+  Processing by RequestsController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+Rendered shared/_price-slider.html (1.1ms)
+Rendered requests/_form.html.haml (146.1ms)
+Rendered shared/_head.html.haml (16.2ms)
+Rendered shared/_flashes.html.haml (133.0ms)
+Rendered shared/_user_bar.html.haml (15.4ms)
+Rendered requests/new.html.haml within layouts/application (348.7ms)
+Completed 200 OK in 531ms (Views: 369.6ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/requests" for 127.0.0.1 at 2011-01-17 19:11:25 +0300
+  Processing by RequestsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "request"=>{"fullname"=>"aaaaaaaaaaa", "price"=>"5504", "email"=>"fdsf", "details"=>"afsa"}, "x"=>"43", "y"=>"13"}
+  [1m[35mUser Load (2.5ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+  [1m[36mSQL (7.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (8.3ms)[0m  describe `requests`
+  [1m[36mAREL (73.5ms)[0m  [1mINSERT INTO `requests` (`fullname`, `email`, `price`, `details`, `created_at`, `updated_at`) VALUES ('aaaaaaaaaaa', 'fdsf', 5504, 'afsa', '2011-01-17 16:11:26', '2011-01-17 16:11:26')[0m
+  [1m[35mSQL (63.8ms)[0m  COMMIT
+Rendered shared/_price-slider.html (1.1ms)
+Rendered requests/_form.html.haml (98.5ms)
+Rendered shared/_head.html.haml (11.7ms)
+Rendered shared/_flashes.html.haml (4.4ms)
+Rendered shared/_user_bar.html.haml (17.2ms)
+Rendered requests/new.html.haml within layouts/application (181.2ms)
+Completed 200 OK in 627ms (Views: 210.7ms | ActiveRecord: 155.4ms)
+
+
+Started GET "/check_for_new_requests.js?count=132" for 127.0.0.1 at 2011-01-17 19:11:28 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"132"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.9ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/check_for_new_requests.js.haml (4.6ms)
+Completed 200 OK in 110ms (Views: 8.7ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/update_requests_count.js" for 127.0.0.1 at 2011-01-17 19:12:05 +0300
+  Processing by RequestsController#update_requests_count as JS
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.6ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/update_requests_count.js.haml (2.6ms)
+Completed 200 OK in 154ms (Views: 25.6ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/requests" for 127.0.0.1 at 2011-01-17 19:12:38 +0300
+  Processing by RequestsController#index as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (16.9ms)[0m  SELECT `requests`.* FROM `requests` ORDER BY requests.id DESC LIMIT 1
+  [1m[36mRequest Load (42.8ms)[0m  [1mSELECT `requests`.* FROM `requests` ORDER BY created_at desc[0m
+Rendered shared/_head.html.haml (10.0ms)
+Rendered shared/_flashes.html.haml (8.7ms)
+Rendered shared/_user_bar.html.haml (13.8ms)
+Rendered requests/index.html.haml within layouts/application (307.5ms)
+Completed 200 OK in 855ms (Views: 356.8ms | ActiveRecord: 61.6ms)
+
+
+Started GET "/requests" for 127.0.0.1 at 2011-01-17 19:12:39 +0300
+  Processing by RequestsController#index as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+  [1m[36mRequest Load (2.2ms)[0m  [1mSELECT `requests`.* FROM `requests` ORDER BY requests.id DESC LIMIT 1[0m
+  [1m[35mRequest Load (2.9ms)[0m  SELECT `requests`.* FROM `requests` ORDER BY created_at desc
+Rendered shared/_head.html.haml (14.1ms)
+Rendered shared/_flashes.html.haml (4.2ms)
+Rendered shared/_user_bar.html.haml (13.2ms)
+Rendered requests/index.html.haml within layouts/application (291.2ms)
+Completed 200 OK in 549ms (Views: 304.3ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-17 19:12:44 +0300
+  Processing by RequestsController#new as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+Rendered shared/_price-slider.html (3.1ms)
+Rendered requests/_form.html.haml (120.3ms)
+Rendered shared/_head.html.haml (12.8ms)
+Rendered shared/_flashes.html.haml (6.4ms)
+Rendered shared/_user_bar.html.haml (15.6ms)
+Rendered requests/new.html.haml within layouts/application (213.3ms)
+Completed 200 OK in 592ms (Views: 252.3ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/requests" for 127.0.0.1 at 2011-01-17 19:12:49 +0300
+  Processing by RequestsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "request"=>{"fullname"=>"AAAAAAAAAAAAAAAAAAAA", "price"=>"4932", "email"=>"gdsg", "details"=>"sfg"}, "x"=>"32", "y"=>"14"}
+  [1m[35mUser Load (0.8ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+  [1m[36mSQL (14.4ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (9.3ms)[0m  describe `requests`
+  [1m[36mAREL (81.4ms)[0m  [1mINSERT INTO `requests` (`fullname`, `email`, `price`, `details`, `created_at`, `updated_at`) VALUES ('AAAAAAAAAAAAAAAAAAAA', 'gdsg', 4932, 'sfg', '2011-01-17 16:12:50', '2011-01-17 16:12:50')[0m
+  [1m[35mSQL (67.0ms)[0m  COMMIT
+Rendered shared/_price-slider.html (1.1ms)
+Rendered requests/_form.html.haml (86.6ms)
+Rendered shared/_head.html.haml (15.9ms)
+Rendered shared/_flashes.html.haml (4.3ms)
+Rendered shared/_user_bar.html.haml (18.7ms)
+Rendered requests/new.html.haml within layouts/application (159.4ms)
+Completed 200 OK in 729ms (Views: 296.1ms | ActiveRecord: 173.0ms)
+
+
+Started GET "/check_for_new_requests.js?count=133" for 127.0.0.1 at 2011-01-17 19:12:53 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"133"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.9ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/check_for_new_requests.js.haml (4.5ms)
+Completed 200 OK in 132ms (Views: 29.4ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/fetch_new_requests.js?count=133" for 127.0.0.1 at 2011-01-17 19:12:54 +0300
+
+AbstractController::ActionNotFound (The action 'fetch_for_new_requests' could not be found for RequestsController):
+  
+
+Rendered /home/adam/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (1.8ms)
+
+
+Started GET "/update_requests_count.js" for 127.0.0.1 at 2011-01-17 19:12:54 +0300
+  Processing by RequestsController#update_requests_count as JS
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.6ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/update_requests_count.js.haml (2.7ms)
+Completed 200 OK in 117ms (Views: 17.6ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/update_requests_count.js" for 127.0.0.1 at 2011-01-17 19:13:25 +0300
+  Processing by RequestsController#update_requests_count as JS
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.6ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/update_requests_count.js.haml (2.7ms)
+Completed 200 OK in 183ms (Views: 7.0ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/fetch_new_requests.js?count=134" for 127.0.0.1 at 2011-01-17 19:13:25 +0300
+  Processing by RequestsController#fetch_new_requests as JS
+  Parameters: {"count"=>"134"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.6ms)[0m  SELECT `requests`.* FROM `requests`
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `requests`.* FROM `requests`[0m
+Rendered requests/fetch_new_requests.js.haml (6.2ms)
+Completed 200 OK in 136ms (Views: 16.9ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/requests" for 127.0.0.1 at 2011-01-17 19:13:43 +0300
+  Processing by RequestsController#index as HTML
+  [1m[35mUser Load (0.8ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+  [1m[36mRequest Load (25.7ms)[0m  [1mSELECT `requests`.* FROM `requests` ORDER BY requests.id DESC LIMIT 1[0m
+  [1m[35mRequest Load (34.8ms)[0m  SELECT `requests`.* FROM `requests` ORDER BY created_at desc
+Rendered shared/_head.html.haml (34.9ms)
+Rendered shared/_flashes.html.haml (9.6ms)
+Rendered shared/_user_bar.html.haml (17.5ms)
+Rendered requests/index.html.haml within layouts/application (524.5ms)
+Completed 200 OK in 827ms (Views: 589.6ms | ActiveRecord: 61.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-17 19:13:49 +0300
+  Processing by RequestsController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+Rendered shared/_price-slider.html (8.5ms)
+Rendered requests/_form.html.haml (251.0ms)
+Rendered shared/_head.html.haml (14.9ms)
+Rendered shared/_flashes.html.haml (4.8ms)
+Rendered shared/_user_bar.html.haml (17.5ms)
+Rendered requests/new.html.haml within layouts/application (334.1ms)
+Completed 200 OK in 557ms (Views: 363.3ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/requests" for 127.0.0.1 at 2011-01-17 19:13:55 +0300
+  Processing by RequestsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "request"=>{"fullname"=>"fsafdaf23333333333333333", "price"=>"8000", "email"=>"fsafas", "details"=>"fsa"}, "x"=>"62", "y"=>"4"}
+  [1m[35mUser Load (19.9ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+  [1m[36mSQL (8.5ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (6.5ms)[0m  describe `requests`
+  [1m[36mAREL (57.4ms)[0m  [1mINSERT INTO `requests` (`fullname`, `email`, `price`, `details`, `created_at`, `updated_at`) VALUES ('fsafdaf23333333333333333', 'fsafas', 8000, 'fsa', '2011-01-17 16:13:56', '2011-01-17 16:13:56')[0m
+  [1m[35mSQL (68.7ms)[0m  COMMIT
+Rendered shared/_price-slider.html (136.3ms)
+Rendered requests/_form.html.haml (240.1ms)
+Rendered shared/_head.html.haml (29.1ms)
+Rendered shared/_flashes.html.haml (5.5ms)
+Rendered shared/_user_bar.html.haml (16.9ms)
+Rendered requests/new.html.haml within layouts/application (350.2ms)
+Completed 200 OK in 821ms (Views: 387.6ms | ActiveRecord: 161.0ms)
+
+
+Started GET "/check_for_new_requests.js?count=134" for 127.0.0.1 at 2011-01-17 19:13:59 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"134"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.8ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/check_for_new_requests.js.haml (4.6ms)
+Completed 200 OK in 128ms (Views: 31.9ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/fetch_new_requests.js?count=134" for 127.0.0.1 at 2011-01-17 19:14:01 +0300
+  Processing by RequestsController#fetch_new_requests as JS
+  Parameters: {"count"=>"134"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.7ms)[0m  SELECT `requests`.* FROM `requests`
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `requests`.* FROM `requests`[0m
+Rendered requests/fetch_new_requests.js.haml (22.3ms)
+Completed 200 OK in 216ms (Views: 37.2ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/update_requests_count.js" for 127.0.0.1 at 2011-01-17 19:14:02 +0300
+  Processing by RequestsController#update_requests_count as JS
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+  [1m[36mRequest Load (1.7ms)[0m  [1mSELECT `requests`.* FROM `requests`[0m
+Rendered requests/update_requests_count.js.haml (4.7ms)
+Completed 200 OK in 152ms (Views: 52.4ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/requests" for 127.0.0.1 at 2011-01-17 19:14:22 +0300
+  Processing by RequestsController#index as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+  [1m[36mRequest Load (0.8ms)[0m  [1mSELECT `requests`.* FROM `requests` ORDER BY requests.id DESC LIMIT 1[0m
+  [1m[35mRequest Load (9.8ms)[0m  SELECT `requests`.* FROM `requests` ORDER BY created_at desc
+Rendered shared/_head.html.haml (10.1ms)
+Rendered shared/_flashes.html.haml (8.5ms)
+Rendered shared/_user_bar.html.haml (70.9ms)
+Rendered requests/index.html.haml within layouts/application (449.8ms)
+Completed 200 OK in 629ms (Views: 478.8ms | ActiveRecord: 11.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-17 19:14:33 +0300
+  Processing by RequestsController#new as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+Rendered shared/_price-slider.html (1.2ms)
+Rendered requests/_form.html.haml (112.1ms)
+Rendered shared/_head.html.haml (19.1ms)
+Rendered shared/_flashes.html.haml (4.4ms)
+Rendered shared/_user_bar.html.haml (16.0ms)
+Rendered requests/new.html.haml within layouts/application (343.4ms)
+Completed 200 OK in 507ms (Views: 372.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/requests" for 127.0.0.1 at 2011-01-17 19:14:58 +0300
+  Processing by RequestsController#index as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+  [1m[36mRequest Load (0.5ms)[0m  [1mSELECT `requests`.* FROM `requests` ORDER BY requests.id DESC LIMIT 1[0m
+  [1m[35mRequest Load (9.0ms)[0m  SELECT `requests`.* FROM `requests` ORDER BY created_at desc
+Rendered shared/_head.html.haml (14.1ms)
+Rendered shared/_flashes.html.haml (4.4ms)
+Rendered shared/_user_bar.html.haml (17.5ms)
+Rendered requests/index.html.haml within layouts/application (373.9ms)
+Completed 200 OK in 551ms (Views: 401.3ms | ActiveRecord: 10.2ms)
+
+
+Started POST "/requests" for 127.0.0.1 at 2011-01-17 19:15:03 +0300
+  Processing by RequestsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "request"=>{"fullname"=>"MONKEYGONETOHEAVEN", "price"=>"8000", "email"=>"monkey@monkey.com", "details"=>"I'm a monkey."}, "x"=>"39", "y"=>"18"}
+  [1m[36mUser Load (6.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mSQL (21.6ms)[0m  BEGIN
+  [1m[36mSQL (13.7ms)[0m  [1mdescribe `requests`[0m
+  [1m[35mAREL (98.0ms)[0m  INSERT INTO `requests` (`fullname`, `email`, `price`, `details`, `created_at`, `updated_at`) VALUES ('MONKEYGONETOHEAVEN', 'monkey@monkey.com', 8000, 'I\'m a monkey.', '2011-01-17 16:15:04', '2011-01-17 16:15:04')
+  [1m[36mSQL (71.9ms)[0m  [1mCOMMIT[0m
+Rendered shared/_price-slider.html (5.5ms)
+Rendered requests/_form.html.haml (177.3ms)
+Rendered shared/_head.html.haml (10.2ms)
+Rendered shared/_flashes.html.haml (9.6ms)
+Rendered shared/_user_bar.html.haml (12.2ms)
+Rendered requests/new.html.haml within layouts/application (248.2ms)
+Completed 200 OK in 814ms (Views: 301.5ms | ActiveRecord: 211.3ms)
+
+
+Started GET "/check_for_new_requests.js?count=135" for 127.0.0.1 at 2011-01-17 19:15:08 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"135"}
+  [1m[35mUser Load (2.4ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+  [1m[36mRequest Load (1.7ms)[0m  [1mSELECT `requests`.* FROM `requests`[0m
+Rendered requests/check_for_new_requests.js.haml (4.8ms)
+Completed 200 OK in 146ms (Views: 20.3ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/fetch_new_requests.js?count=135" for 127.0.0.1 at 2011-01-17 19:15:09 +0300
+  Processing by RequestsController#fetch_new_requests as JS
+  Parameters: {"count"=>"135"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+  [1m[36mRequest Load (1.7ms)[0m  [1mSELECT `requests`.* FROM `requests`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/fetch_new_requests.js.haml (22.3ms)
+Completed 200 OK in 134ms (Views: 36.3ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/update_requests_count.js" for 127.0.0.1 at 2011-01-17 19:15:09 +0300
+  Processing by RequestsController#update_requests_count as JS
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.7ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/update_requests_count.js.haml (2.7ms)
+Completed 200 OK in 128ms (Views: 14.6ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/check_for_new_requests.js?count=136" for 127.0.0.1 at 2011-01-17 19:15:59 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"136"}
+  [1m[36mUser Load (1.8ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (4.7ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/check_for_new_requests.js.haml (13.4ms)
+Completed 200 OK in 492ms (Views: 27.6ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-17 19:16:26 +0300
+  Processing by RequestsController#new as HTML
+  [1m[36mUser Load (4.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+Rendered shared/_price-slider.html (1.2ms)
+Rendered requests/_form.html.haml (77.8ms)
+Rendered shared/_head.html.haml (18.0ms)
+Rendered shared/_flashes.html.haml (4.4ms)
+Rendered shared/_user_bar.html.haml (25.8ms)
+Rendered requests/new.html.haml within layouts/application (246.9ms)
+Completed 200 OK in 407ms (Views: 266.5ms | ActiveRecord: 4.2ms)
+
+
+Started POST "/requests" for 127.0.0.1 at 2011-01-17 19:16:34 +0300
+  Processing by RequestsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "request"=>{"fullname"=>"fsafaf!!!", "price"=>"8000", "email"=>"asfsaf", "details"=>"safafdsadfsa"}, "x"=>"57", "y"=>"3"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+  [1m[36mSQL (1.9ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.7ms)[0m  describe `requests`
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO `requests` (`fullname`, `email`, `price`, `details`, `created_at`, `updated_at`) VALUES ('fsafaf!!!', 'asfsaf', 8000, 'safafdsadfsa', '2011-01-17 16:16:34', '2011-01-17 16:16:34')[0m
+  [1m[35mSQL (38.7ms)[0m  COMMIT
+Rendered shared/_price-slider.html (1.1ms)
+Rendered requests/_form.html.haml (135.9ms)
+Rendered shared/_head.html.haml (14.2ms)
+Rendered shared/_flashes.html.haml (5.2ms)
+Rendered shared/_user_bar.html.haml (11.3ms)
+Rendered requests/new.html.haml within layouts/application (209.8ms)
+Completed 200 OK in 563ms (Views: 241.8ms | ActiveRecord: 43.5ms)
+
+
+Started GET "/check_for_new_requests.js?count=136" for 127.0.0.1 at 2011-01-17 19:16:39 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"136"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.8ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/check_for_new_requests.js.haml (4.4ms)
+Completed 200 OK in 106ms (Views: 9.0ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/update_requests_count.js" for 127.0.0.1 at 2011-01-17 19:16:41 +0300
+  Processing by RequestsController#update_requests_count as JS
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.7ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/update_requests_count.js.haml (2.7ms)
+Completed 200 OK in 99ms (Views: 7.3ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/fetch_new_requests.js?count=136" for 127.0.0.1 at 2011-01-17 19:16:42 +0300
+  Processing by RequestsController#fetch_new_requests as JS
+  Parameters: {"count"=>"136"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.9ms)[0m  SELECT `requests`.* FROM `requests`
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `requests`.* FROM `requests`[0m
+Rendered requests/fetch_new_requests.js.haml (21.7ms)
+Completed 200 OK in 204ms (Views: 26.2ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/check_for_new_requests.js?count=137" for 127.0.0.1 at 2011-01-17 19:16:59 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"137"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+  [1m[36mRequest Load (1.7ms)[0m  [1mSELECT `requests`.* FROM `requests`[0m
+Rendered requests/check_for_new_requests.js.haml (4.8ms)
+Completed 200 OK in 139ms (Views: 8.7ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/check_for_new_requests.js?count=137" for 127.0.0.1 at 2011-01-17 19:17:59 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"137"}
+  [1m[35mUser Load (0.8ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+  [1m[36mRequest Load (1.7ms)[0m  [1mSELECT `requests`.* FROM `requests`[0m
+Rendered requests/check_for_new_requests.js.haml (101.2ms)
+Completed 200 OK in 197ms (Views: 105.6ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/requests" for 127.0.0.1 at 2011-01-17 19:18:34 +0300
+  Processing by RequestsController#index as HTML
+  [1m[35mUser Load (0.8ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+  [1m[36mRequest Load (0.6ms)[0m  [1mSELECT `requests`.* FROM `requests` ORDER BY requests.id DESC LIMIT 1[0m
+  [1m[35mRequest Load (49.6ms)[0m  SELECT `requests`.* FROM `requests` ORDER BY created_at desc
+Rendered shared/_head.html.haml (30.4ms)
+Rendered shared/_flashes.html.haml (4.3ms)
+Rendered shared/_user_bar.html.haml (13.5ms)
+Rendered requests/index.html.haml within layouts/application (321.5ms)
+Completed 200 OK in 549ms (Views: 347.0ms | ActiveRecord: 51.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-17 19:18:46 +0300
+  Processing by RequestsController#new as HTML
+  [1m[36mUser Load (10.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+Rendered shared/_price-slider.html (7.0ms)
+Rendered requests/_form.html.haml (126.4ms)
+Rendered shared/_head.html.haml (18.6ms)
+Rendered shared/_flashes.html.haml (6.2ms)
+Rendered shared/_user_bar.html.haml (188.9ms)
+Rendered requests/new.html.haml within layouts/application (390.0ms)
+Completed 200 OK in 596ms (Views: 426.6ms | ActiveRecord: 10.5ms)
+
+
+Started POST "/requests" for 127.0.0.1 at 2011-01-17 19:18:52 +0300
+  Processing by RequestsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "request"=>{"fullname"=>"fdadfa1111", "price"=>"8000", "email"=>"fsafa", "details"=>"fdafa"}, "x"=>"61", "y"=>"11"}
+  [1m[35mUser Load (0.8ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (4.3ms)[0m  describe `requests`
+  [1m[36mAREL (34.7ms)[0m  [1mINSERT INTO `requests` (`fullname`, `email`, `price`, `details`, `created_at`, `updated_at`) VALUES ('fdadfa1111', 'fsafa', 8000, 'fdafa', '2011-01-17 16:18:53', '2011-01-17 16:18:53')[0m
+  [1m[35mSQL (69.5ms)[0m  COMMIT
+Rendered shared/_price-slider.html (1.2ms)
+Rendered requests/_form.html.haml (65.3ms)
+Rendered shared/_head.html.haml (43.2ms)
+Rendered shared/_flashes.html.haml (5.0ms)
+Rendered shared/_user_bar.html.haml (19.8ms)
+Rendered requests/new.html.haml within layouts/application (200.7ms)
+Completed 200 OK in 633ms (Views: 244.7ms | ActiveRecord: 109.4ms)
+
+
+Started GET "/check_for_new_requests.js?count=137" for 127.0.0.1 at 2011-01-17 19:18:59 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"137"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (2.1ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/check_for_new_requests.js.haml (4.3ms)
+Completed 200 OK in 124ms (Views: 27.4ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/update_requests_count.js" for 127.0.0.1 at 2011-01-17 19:19:00 +0300
+  Processing by RequestsController#update_requests_count as JS
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.8ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/update_requests_count.js.haml (2.7ms)
+Completed 200 OK in 119ms (Views: 22.8ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/fetch_new_requests.js?count=137" for 127.0.0.1 at 2011-01-17 19:19:00 +0300
+  Processing by RequestsController#fetch_new_requests as JS
+  Parameters: {"count"=>"137"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.7ms)[0m  SELECT `requests`.* FROM `requests`
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `requests`.* FROM `requests`[0m
+Rendered requests/fetch_new_requests.js.haml (38.1ms)
+Completed 200 OK in 239ms (Views: 53.9ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/check_for_new_requests.js?count=138" for 127.0.0.1 at 2011-01-17 19:19:00 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"138"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+  [1m[36mRequest Load (1.9ms)[0m  [1mSELECT `requests`.* FROM `requests`[0m
+Rendered requests/check_for_new_requests.js.haml (4.5ms)
+Completed 200 OK in 141ms (Views: 8.9ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-17 19:19:07 +0300
+  Processing by RequestsController#new as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+Rendered shared/_price-slider.html (1.3ms)
+Rendered requests/_form.html.haml (134.5ms)
+Rendered shared/_head.html.haml (36.5ms)
+Rendered shared/_flashes.html.haml (13.1ms)
+Rendered shared/_user_bar.html.haml (26.5ms)
+Rendered requests/new.html.haml within layouts/application (400.5ms)
+Completed 200 OK in 560ms (Views: 422.3ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/requests" for 127.0.0.1 at 2011-01-17 19:19:11 +0300
+  Processing by RequestsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "request"=>{"fullname"=>"fsafdsa", "price"=>"8000", "email"=>"fsafa", "details"=>"fsafa"}, "x"=>"70", "y"=>"6"}
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (8.5ms)[0m  [1mdescribe `requests`[0m
+  [1m[35mAREL (0.5ms)[0m  INSERT INTO `requests` (`fullname`, `email`, `price`, `details`, `created_at`, `updated_at`) VALUES ('fsafdsa', 'fsafa', 8000, 'fsafa', '2011-01-17 16:19:12', '2011-01-17 16:19:12')
+  [1m[36mSQL (52.3ms)[0m  [1mCOMMIT[0m
+Rendered shared/_price-slider.html (1.1ms)
+Rendered requests/_form.html.haml (293.8ms)
+Rendered shared/_head.html.haml (10.8ms)
+Rendered shared/_flashes.html.haml (5.3ms)
+Rendered shared/_user_bar.html.haml (12.4ms)
+Rendered requests/new.html.haml within layouts/application (370.8ms)
+Completed 200 OK in 729ms (Views: 404.8ms | ActiveRecord: 62.3ms)
+
+
+Started GET "/check_for_new_requests.js?count=138" for 127.0.0.1 at 2011-01-17 19:19:14 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"138"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+  [1m[36mRequest Load (1.7ms)[0m  [1mSELECT `requests`.* FROM `requests`[0m
+Rendered requests/check_for_new_requests.js.haml (4.8ms)
+Completed 200 OK in 106ms (Views: 9.3ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/update_requests_count.js" for 127.0.0.1 at 2011-01-17 19:19:15 +0300
+  Processing by RequestsController#update_requests_count as JS
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+  [1m[36mRequest Load (1.7ms)[0m  [1mSELECT `requests`.* FROM `requests`[0m
+Rendered requests/update_requests_count.js.haml (3.0ms)
+Completed 200 OK in 204ms (Views: 7.2ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/fetch_new_requests.js?count=138" for 127.0.0.1 at 2011-01-17 19:19:15 +0300
+  Processing by RequestsController#fetch_new_requests as JS
+  Parameters: {"count"=>"138"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+  [1m[36mRequest Load (2.2ms)[0m  [1mSELECT `requests`.* FROM `requests`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/fetch_new_requests.js.haml (22.0ms)
+Completed 200 OK in 138ms (Views: 26.2ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/check_for_new_requests.js?count=139" for 127.0.0.1 at 2011-01-17 19:19:16 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"139"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.7ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/check_for_new_requests.js.haml (4.8ms)
+Completed 200 OK in 183ms (Views: 9.1ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/check_for_new_requests.js?count=139" for 127.0.0.1 at 2011-01-17 19:19:35 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"139"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.8ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/check_for_new_requests.js.haml (16.1ms)
+Completed 200 OK in 347ms (Views: 36.7ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/check_for_new_requests.js?count=139" for 127.0.0.1 at 2011-01-17 19:20:36 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"139"}
+  [1m[36mUser Load (7.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.7ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/check_for_new_requests.js.haml (4.5ms)
+Completed 200 OK in 216ms (Views: 25.5ms | ActiveRecord: 8.9ms)
+
+
+Started GET "/check_for_new_requests.js?count=139" for 127.0.0.1 at 2011-01-17 19:21:35 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"139"}
+  [1m[36mUser Load (11.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.7ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/check_for_new_requests.js.haml (4.5ms)
+Completed 200 OK in 185ms (Views: 23.6ms | ActiveRecord: 12.9ms)
+
+
+Started GET "/check_for_new_requests.js?count=139" for 127.0.0.1 at 2011-01-17 19:22:35 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"139"}
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.7ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/check_for_new_requests.js.haml (4.4ms)
+Completed 200 OK in 103ms (Views: 8.8ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/check_for_new_requests.js?count=139" for 127.0.0.1 at 2011-01-17 19:23:35 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"139"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (2.1ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/check_for_new_requests.js.haml (12.3ms)
+Completed 200 OK in 217ms (Views: 27.9ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/check_for_new_requests.js?count=139" for 127.0.0.1 at 2011-01-17 19:24:35 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"139"}
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (2.1ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/check_for_new_requests.js.haml (4.8ms)
+Completed 200 OK in 104ms (Views: 8.9ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/requests" for 127.0.0.1 at 2011-01-17 19:25:15 +0300
+  Processing by RequestsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (149.0ms)[0m  SELECT `requests`.* FROM `requests` ORDER BY requests.id DESC LIMIT 1
+  [1m[36mRequest Load (42.0ms)[0m  [1mSELECT `requests`.* FROM `requests` ORDER BY created_at desc[0m
+Rendered shared/_head.html.haml (22.3ms)
+Rendered shared/_flashes.html.haml (4.3ms)
+Rendered shared/_user_bar.html.haml (12.7ms)
+Rendered requests/index.html.haml within layouts/application (582.5ms)
+Completed 200 OK in 1055ms (Views: 686.7ms | ActiveRecord: 191.7ms)
+
+
+Started GET "/requests" for 127.0.0.1 at 2011-01-17 19:25:16 +0300
+  Processing by RequestsController#index as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+  [1m[36mRequest Load (0.5ms)[0m  [1mSELECT `requests`.* FROM `requests` ORDER BY requests.id DESC LIMIT 1[0m
+  [1m[35mRequest Load (2.6ms)[0m  SELECT `requests`.* FROM `requests` ORDER BY created_at desc
+Rendered shared/_head.html.haml (14.0ms)
+Rendered shared/_flashes.html.haml (4.3ms)
+Rendered shared/_user_bar.html.haml (13.4ms)
+Rendered requests/index.html.haml within layouts/application (594.8ms)
+Completed 200 OK in 836ms (Views: 620.9ms | ActiveRecord: 3.9ms)
+
+
+Started POST "/requests/139" for 127.0.0.1 at 2011-01-17 19:25:27 +0300
+
+AbstractController::ActionNotFound (The action 'update' could not be found for RequestsController):
+  
+
+Rendered /home/adam/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (1.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-17 19:25:30 +0300
+  Processing by RequestsController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+Rendered shared/_price-slider.html (1.2ms)
+Rendered requests/_form.html.haml (141.4ms)
+Rendered shared/_head.html.haml (15.2ms)
+Rendered shared/_flashes.html.haml (4.4ms)
+Rendered shared/_user_bar.html.haml (20.7ms)
+Rendered requests/new.html.haml within layouts/application (234.6ms)
+Completed 200 OK in 528ms (Views: 266.0ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/requests" for 127.0.0.1 at 2011-01-17 19:25:37 +0300
+  Processing by RequestsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "request"=>{"fullname"=>"HAHA", "price"=>"6544", "email"=>"f", "details"=>"safsa"}, "x"=>"51", "y"=>"2"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+  [1m[36mSQL (10.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (19.4ms)[0m  describe `requests`
+  [1m[36mAREL (70.3ms)[0m  [1mINSERT INTO `requests` (`fullname`, `email`, `price`, `details`, `created_at`, `updated_at`) VALUES ('HAHA', 'f', 6544, 'safsa', '2011-01-17 16:25:37', '2011-01-17 16:25:37')[0m
+  [1m[35mSQL (91.1ms)[0m  COMMIT
+Rendered shared/_price-slider.html (1.2ms)
+Rendered requests/_form.html.haml (75.6ms)
+Rendered shared/_head.html.haml (13.3ms)
+Rendered shared/_flashes.html.haml (4.7ms)
+Rendered shared/_user_bar.html.haml (12.0ms)
+Rendered requests/new.html.haml within layouts/application (148.7ms)
+Completed 200 OK in 802ms (Views: 175.9ms | ActiveRecord: 191.8ms)
+
+
+Started GET "/check_for_new_requests.js?count=139" for 127.0.0.1 at 2011-01-17 19:25:40 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"139"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.7ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/check_for_new_requests.js.haml (4.4ms)
+Completed 200 OK in 102ms (Views: 8.6ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/fetch_new_requests.js?type=1&count=139" for 127.0.0.1 at 2011-01-17 19:25:42 +0300
+  Processing by RequestsController#fetch_new_requests as JS
+  Parameters: {"type"=>"1", "count"=>"139"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.7ms)[0m  SELECT `requests`.* FROM `requests`
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `requests`.* FROM `requests`[0m
+Rendered requests/fetch_new_requests.js.haml (26.7ms)
+Completed 200 OK in 134ms (Views: 31.0ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/fetch_new_requests.js?type=0&count=139" for 127.0.0.1 at 2011-01-17 19:25:42 +0300
+  Processing by RequestsController#fetch_new_requests as JS
+  Parameters: {"type"=>"0", "count"=>"139"}
+  [1m[35mUser Load (0.8ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+  [1m[36mRequest Load (1.7ms)[0m  [1mSELECT `requests`.* FROM `requests`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/fetch_new_requests.js.haml (38.4ms)
+Completed 200 OK in 141ms (Views: 42.4ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/update_requests_count.js" for 127.0.0.1 at 2011-01-17 19:25:42 +0300
+  Processing by RequestsController#update_requests_count as JS
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.7ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/update_requests_count.js.haml (2.9ms)
+Completed 200 OK in 192ms (Views: 12.6ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/check_for_new_requests.js?count=139" for 127.0.0.1 at 2011-01-17 19:25:42 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"139"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.7ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/check_for_new_requests.js.haml (4.9ms)
+Completed 200 OK in 105ms (Views: 9.3ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/fetch_new_requests.js?type=1&count=140" for 127.0.0.1 at 2011-01-17 19:25:58 +0300
+  Processing by RequestsController#fetch_new_requests as JS
+  Parameters: {"type"=>"1", "count"=>"140"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.7ms)[0m  SELECT `requests`.* FROM `requests`
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `requests`.* FROM `requests`[0m
+Rendered requests/fetch_new_requests.js.haml (12.2ms)
+Completed 200 OK in 201ms (Views: 28.8ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/update_requests_count.js" for 127.0.0.1 at 2011-01-17 19:25:58 +0300
+  Processing by RequestsController#update_requests_count as JS
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+  [1m[36mRequest Load (1.7ms)[0m  [1mSELECT `requests`.* FROM `requests`[0m
+Rendered requests/update_requests_count.js.haml (2.8ms)
+Completed 200 OK in 105ms (Views: 6.7ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/fetch_new_requests.js?type=0&count=140" for 127.0.0.1 at 2011-01-17 19:25:58 +0300
+  Processing by RequestsController#fetch_new_requests as JS
+  Parameters: {"type"=>"0", "count"=>"140"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+  [1m[36mRequest Load (1.9ms)[0m  [1mSELECT `requests`.* FROM `requests`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/fetch_new_requests.js.haml (11.5ms)
+Completed 200 OK in 112ms (Views: 16.0ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/check_for_new_requests.js?count=140" for 127.0.0.1 at 2011-01-17 19:25:58 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"140"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.9ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/check_for_new_requests.js.haml (5.0ms)
+Completed 200 OK in 248ms (Views: 9.6ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-17 19:26:05 +0300
+  Processing by RequestsController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+Rendered shared/_price-slider.html (7.7ms)
+Rendered requests/_form.html.haml (252.9ms)
+Rendered shared/_head.html.haml (30.1ms)
+Rendered shared/_flashes.html.haml (14.4ms)
+Rendered shared/_user_bar.html.haml (33.1ms)
+Rendered requests/new.html.haml within layouts/application (365.6ms)
+Completed 200 OK in 532ms (Views: 384.5ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/requests" for 127.0.0.1 at 2011-01-17 19:26:10 +0300
+  Processing by RequestsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "request"=>{"fullname"=>"fsaf234242", "price"=>"8000", "email"=>"4254", "details"=>"53"}, "x"=>"77", "y"=>"22"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.6ms)[0m  describe `requests`
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO `requests` (`fullname`, `email`, `price`, `details`, `created_at`, `updated_at`) VALUES ('fsaf234242', '4254', 8000, '53', '2011-01-17 16:26:10', '2011-01-17 16:26:10')[0m
+  [1m[35mSQL (43.2ms)[0m  COMMIT
+Rendered shared/_price-slider.html (1.1ms)
+Rendered requests/_form.html.haml (185.1ms)
+Rendered shared/_head.html.haml (23.6ms)
+Rendered shared/_flashes.html.haml (103.5ms)
+Rendered shared/_user_bar.html.haml (19.7ms)
+Rendered requests/new.html.haml within layouts/application (382.4ms)
+Completed 200 OK in 744ms (Views: 412.6ms | ActiveRecord: 46.1ms)
+
+
+Started GET "/check_for_new_requests.js?count=140" for 127.0.0.1 at 2011-01-17 19:26:18 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"140"}
+  [1m[36mUser Load (5.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.8ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/check_for_new_requests.js.haml (4.3ms)
+Completed 200 OK in 249ms (Views: 8.9ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/update_requests_count.js" for 127.0.0.1 at 2011-01-17 19:26:21 +0300
+  Processing by RequestsController#update_requests_count as JS
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.7ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/update_requests_count.js.haml (3.0ms)
+Completed 200 OK in 103ms (Views: 7.2ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/fetch_new_requests.js?type=0&count=140" for 127.0.0.1 at 2011-01-17 19:26:21 +0300
+  Processing by RequestsController#fetch_new_requests as JS
+  Parameters: {"type"=>"0", "count"=>"140"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.7ms)[0m  SELECT `requests`.* FROM `requests`
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `requests`.* FROM `requests`[0m
+Rendered requests/fetch_new_requests.js.haml (28.0ms)
+Completed 200 OK in 240ms (Views: 35.9ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/fetch_new_requests.js?type=1&count=140" for 127.0.0.1 at 2011-01-17 19:26:22 +0300
+  Processing by RequestsController#fetch_new_requests as JS
+  Parameters: {"type"=>"1", "count"=>"140"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+  [1m[36mRequest Load (1.7ms)[0m  [1mSELECT `requests`.* FROM `requests`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/fetch_new_requests.js.haml (29.2ms)
+Completed 200 OK in 135ms (Views: 33.6ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/check_for_new_requests.js?count=141" for 127.0.0.1 at 2011-01-17 19:26:22 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"141"}
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.7ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/check_for_new_requests.js.haml (5.0ms)
+Completed 200 OK in 187ms (Views: 9.3ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/check_for_new_requests.js?count=141" for 127.0.0.1 at 2011-01-17 19:27:18 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"141"}
+  [1m[36mUser Load (12.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.8ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/check_for_new_requests.js.haml (28.0ms)
+Completed 200 OK in 333ms (Views: 67.9ms | ActiveRecord: 13.9ms)
+
+
+Started GET "/check_for_new_requests.js?count=141" for 127.0.0.1 at 2011-01-17 19:28:18 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"141"}
+  [1m[36mUser Load (11.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (2.0ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/check_for_new_requests.js.haml (17.2ms)
+Completed 200 OK in 289ms (Views: 40.2ms | ActiveRecord: 13.1ms)
+
+
+Started GET "/check_for_new_requests.js?count=141" for 127.0.0.1 at 2011-01-17 19:29:18 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"141"}
+  [1m[36mUser Load (37.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.7ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/check_for_new_requests.js.haml (20.9ms)
+Completed 200 OK in 521ms (Views: 111.2ms | ActiveRecord: 39.0ms)
+
+
+Started GET "/check_for_new_requests.js?count=141" for 127.0.0.1 at 2011-01-17 19:30:18 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"141"}
+  [1m[36mUser Load (36.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (2.1ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/check_for_new_requests.js.haml (62.5ms)
+Completed 200 OK in 760ms (Views: 106.1ms | ActiveRecord: 38.8ms)
+
+
+Started GET "/fetch_new_requests.js?type=1&count=135" for 127.0.0.1 at 2011-01-17 19:30:35 +0300
+  Processing by RequestsController#fetch_new_requests as JS
+  Parameters: {"type"=>"1", "count"=>"135"}
+  [1m[36mUser Load (2.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (5.8ms)[0m  SELECT `requests`.* FROM `requests`
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `requests`.* FROM `requests`[0m
+Rendered requests/fetch_new_requests.js.haml (48.6ms)
+Completed 200 OK in 558ms (Views: 82.9ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/fetch_new_requests.js?type=0&count=135" for 127.0.0.1 at 2011-01-17 19:30:43 +0300
+  Processing by RequestsController#fetch_new_requests as JS
+  Parameters: {"type"=>"0", "count"=>"135"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+  [1m[36mRequest Load (6.3ms)[0m  [1mSELECT `requests`.* FROM `requests`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/fetch_new_requests.js.haml (59.4ms)
+Completed 200 OK in 297ms (Views: 65.9ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/fetch_new_requests.js?type=1&count=135" for 127.0.0.1 at 2011-01-17 19:31:07 +0300
+  Processing by RequestsController#fetch_new_requests as JS
+  Parameters: {"type"=>"1", "count"=>"135"}
+  [1m[36mUser Load (30.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (4.7ms)[0m  SELECT `requests`.* FROM `requests`
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `requests`.* FROM `requests`[0m
+Rendered requests/fetch_new_requests.js.haml (62.5ms)
+Completed 200 OK in 714ms (Views: 77.9ms | ActiveRecord: 34.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-17 19:31:21 +0300
+  Processing by RequestsController#new as HTML
+  [1m[35mUser Load (32.8ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+Rendered shared/_price-slider.html (1.1ms)
+Rendered requests/_form.html.haml (107.0ms)
+Rendered shared/_head.html.haml (145.0ms)
+Rendered shared/_flashes.html.haml (4.5ms)
+Rendered shared/_user_bar.html.haml (18.8ms)
+Rendered requests/new.html.haml within layouts/application (380.5ms)
+Completed 200 OK in 880ms (Views: 458.9ms | ActiveRecord: 32.8ms)
+
+
+Started GET "/requests" for 127.0.0.1 at 2011-01-17 19:31:26 +0300
+  Processing by RequestsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (48.2ms)[0m  SELECT `requests`.* FROM `requests` ORDER BY requests.id DESC LIMIT 1
+  [1m[36mRequest Load (60.4ms)[0m  [1mSELECT `requests`.* FROM `requests` ORDER BY created_at desc[0m
+Rendered shared/_head.html.haml (48.4ms)
+Rendered shared/_flashes.html.haml (5.8ms)
+Rendered shared/_user_bar.html.haml (213.7ms)
+Rendered requests/index.html.haml within layouts/application (1413.9ms)
+Completed 200 OK in 1968ms (Views: 1614.0ms | ActiveRecord: 109.3ms)
+
+
+Started GET "/check_for_new_requests.js?count=141" for 127.0.0.1 at 2011-01-17 19:34:11 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"141"}
+  [1m[35mUser Load (3306.9ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+  [1m[36mRequest Load (3171.9ms)[0m  [1mSELECT `requests`.* FROM `requests`[0m
+Rendered requests/check_for_new_requests.js.haml (194.8ms)
+Completed 200 OK in 23157ms (Views: 1213.8ms | ActiveRecord: 6478.8ms)
+
+
+Started GET "/check_for_new_requests.js?count=141" for 127.0.0.1 at 2011-01-17 19:35:16 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"141"}
+  [1m[35mUser Load (5242.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+  [1m[36mRequest Load (2021.5ms)[0m  [1mSELECT `requests`.* FROM `requests`[0m
+Rendered requests/check_for_new_requests.js.haml (94.2ms)
+Completed 200 OK in 23909ms (Views: 345.8ms | ActiveRecord: 7263.9ms)
+
+
+Started GET "/check_for_new_requests.js?count=141" for 127.0.0.1 at 2011-01-17 19:36:14 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"141"}
+  [1m[35mUser Load (5029.5ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+  [1m[36mRequest Load (3686.7ms)[0m  [1mSELECT `requests`.* FROM `requests`[0m
+Rendered requests/check_for_new_requests.js.haml (699.2ms)
+Completed 200 OK in 39326ms (Views: 1974.3ms | ActiveRecord: 8716.2ms)
+
+
+Started GET "/check_for_new_requests.js?count=141" for 127.0.0.1 at 2011-01-17 19:37:22 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"141"}
+  [1m[35mUser Load (7061.4ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+  [1m[36mRequest Load (5444.3ms)[0m  [1mSELECT `requests`.* FROM `requests`[0m
+Rendered requests/check_for_new_requests.js.haml (567.6ms)
+Completed 200 OK in 39283ms (Views: 1712.7ms | ActiveRecord: 12505.7ms)
+
+
+Started GET "/check_for_new_requests.js?count=141" for 127.0.0.1 at 2011-01-17 19:38:26 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"141"}
+  [1m[35mUser Load (1159.4ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+  [1m[36mRequest Load (953.9ms)[0m  [1mSELECT `requests`.* FROM `requests`[0m
+Rendered requests/check_for_new_requests.js.haml (372.1ms)
+Completed 200 OK in 10646ms (Views: 1387.7ms | ActiveRecord: 2113.3ms)
+
+
+Started GET "/check_for_new_requests.js?count=141" for 127.0.0.1 at 2011-01-17 19:39:07 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"141"}
+  [1m[35mUser Load (37.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+  [1m[36mRequest Load (1.8ms)[0m  [1mSELECT `requests`.* FROM `requests`[0m
+Rendered requests/check_for_new_requests.js.haml (29.2ms)
+Completed 200 OK in 1529ms (Views: 116.6ms | ActiveRecord: 39.1ms)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /home/adam/Projects/credits/vendor/plugins/more/rails/init.rb. (called from <top (required)> at /home/adam/Projects/credits/config/environment.rb:5)
+DEPRECATION WARNING: RAILS_ENV is deprecated. Please use ::Rails.env. (called from block in <class:Plugin> at /home/adam/Projects/credits/vendor/plugins/more/rails/init.rb:1)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-17 19:42:15 +0300
+  Processing by RequestsController#new as HTML
+  [1m[36mSQL (33.7ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+Rendered shared/_price-slider.html (1.2ms)
+Rendered requests/_form.html.haml (1646.9ms)
+Rendered shared/_head.html.haml (71.4ms)
+Rendered shared/_flashes.html.haml (13.6ms)
+Rendered shared/_user_bar.html.haml (13.6ms)
+Rendered requests/new.html.haml within layouts/application (2487.5ms)
+Completed 200 OK in 3699ms (Views: 2581.2ms | ActiveRecord: 34.7ms)
+
+
+Started GET "/requests" for 127.0.0.1 at 2011-01-17 19:42:22 +0300
+  Processing by RequestsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (22.5ms)[0m  SELECT `requests`.* FROM `requests` ORDER BY requests.id DESC LIMIT 1
+  [1m[36mRequest Load (37.8ms)[0m  [1mSELECT `requests`.* FROM `requests` ORDER BY created_at desc[0m
+Rendered shared/_head.html.haml (15.9ms)
+Rendered shared/_flashes.html.haml (4.9ms)
+Rendered shared/_user_bar.html.haml (16.7ms)
+Rendered requests/index.html.haml within layouts/application (596.2ms)
+Completed 200 OK in 999ms (Views: 625.6ms | ActiveRecord: 61.0ms)
+
+
+Started POST "/requests" for 127.0.0.1 at 2011-01-17 19:42:31 +0300
+  Processing by RequestsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "request"=>{"fullname"=>"1", "price"=>"8000", "email"=>"1", "details"=>"1"}, "x"=>"69", "y"=>"15"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+  [1m[36mSQL (8.5ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (8.4ms)[0m  describe `requests`
+  [1m[36mAREL (60.1ms)[0m  [1mINSERT INTO `requests` (`fullname`, `email`, `price`, `details`, `created_at`, `updated_at`) VALUES ('1', '1', 8000, '1', '2011-01-17 16:42:31', '2011-01-17 16:42:31')[0m
+  [1m[35mSQL (67.7ms)[0m  COMMIT
+Rendered shared/_price-slider.html (1.0ms)
+Rendered requests/_form.html.haml (183.4ms)
+Rendered shared/_head.html.haml (10.1ms)
+Rendered shared/_flashes.html.haml (4.2ms)
+Rendered shared/_user_bar.html.haml (11.1ms)
+Rendered requests/new.html.haml within layouts/application (249.8ms)
+Completed 200 OK in 710ms (Views: 283.6ms | ActiveRecord: 145.5ms)
+
+
+Started GET "/check_for_new_requests.js?count=141" for 127.0.0.1 at 2011-01-17 19:42:35 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"141"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.8ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/check_for_new_requests.js.haml (4.1ms)
+Completed 200 OK in 109ms (Views: 20.8ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/fetch_new_requests.js?type=0&count=141" for 127.0.0.1 at 2011-01-17 19:42:36 +0300
+  Processing by RequestsController#fetch_new_requests as JS
+  Parameters: {"type"=>"0", "count"=>"141"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.8ms)[0m  SELECT `requests`.* FROM `requests`
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT `requests`.* FROM `requests`[0m
+Rendered requests/fetch_new_requests.js.haml (34.8ms)
+Completed 200 OK in 264ms (Views: 50.3ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/fetch_new_requests.js?type=1&count=141" for 127.0.0.1 at 2011-01-17 19:42:37 +0300
+  Processing by RequestsController#fetch_new_requests as JS
+  Parameters: {"type"=>"1", "count"=>"141"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+  [1m[36mRequest Load (1.8ms)[0m  [1mSELECT `requests`.* FROM `requests`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/fetch_new_requests.js.haml (25.0ms)
+Completed 200 OK in 136ms (Views: 29.0ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/update_requests_count.js" for 127.0.0.1 at 2011-01-17 19:42:37 +0300
+  Processing by RequestsController#update_requests_count as JS
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.8ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/update_requests_count.js.haml (2.9ms)
+Completed 200 OK in 176ms (Views: 15.1ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/check_for_new_requests.js?count=141" for 127.0.0.1 at 2011-01-17 19:42:37 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"141"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.8ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/check_for_new_requests.js.haml (4.2ms)
+Completed 200 OK in 97ms (Views: 8.3ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/update_requests_count.js" for 127.0.0.1 at 2011-01-17 19:42:39 +0300
+  Processing by RequestsController#update_requests_count as JS
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.8ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/update_requests_count.js.haml (2.6ms)
+Completed 200 OK in 145ms (Views: 12.2ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/fetch_new_requests.js?type=1&count=142" for 127.0.0.1 at 2011-01-17 19:42:39 +0300
+  Processing by RequestsController#fetch_new_requests as JS
+  Parameters: {"type"=>"1", "count"=>"142"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.7ms)[0m  SELECT `requests`.* FROM `requests`
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `requests`.* FROM `requests`[0m
+Rendered requests/fetch_new_requests.js.haml (10.8ms)
+Completed 200 OK in 128ms (Views: 31.0ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/fetch_new_requests.js?type=0&count=142" for 127.0.0.1 at 2011-01-17 19:42:39 +0300
+  Processing by RequestsController#fetch_new_requests as JS
+  Parameters: {"type"=>"0", "count"=>"142"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+  [1m[36mRequest Load (1.8ms)[0m  [1mSELECT `requests`.* FROM `requests`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/fetch_new_requests.js.haml (11.5ms)
+Completed 200 OK in 110ms (Views: 15.7ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/check_for_new_requests.js?count=142" for 127.0.0.1 at 2011-01-17 19:42:40 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"142"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.7ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/check_for_new_requests.js.haml (4.4ms)
+Completed 200 OK in 168ms (Views: 8.4ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-17 19:42:57 +0300
+  Processing by RequestsController#new as HTML
+  [1m[36mUser Load (7.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+Rendered shared/_price-slider.html (1.1ms)
+Rendered requests/_form.html.haml (174.1ms)
+Rendered shared/_head.html.haml (12.2ms)
+Rendered shared/_flashes.html.haml (11.7ms)
+Rendered shared/_user_bar.html.haml (126.9ms)
+Rendered requests/new.html.haml within layouts/application (402.8ms)
+Completed 200 OK in 583ms (Views: 423.8ms | ActiveRecord: 7.5ms)
+
+
+Started POST "/requests" for 127.0.0.1 at 2011-01-17 19:43:01 +0300
+  Processing by RequestsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "request"=>{"fullname"=>"2", "price"=>"8000", "email"=>"2", "details"=>"2"}, "x"=>"77", "y"=>"8"}
+  [1m[35mUser Load (3.3ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.7ms)[0m  describe `requests`
+  [1m[36mAREL (5.5ms)[0m  [1mINSERT INTO `requests` (`fullname`, `email`, `price`, `details`, `created_at`, `updated_at`) VALUES ('2', '2', 8000, '2', '2011-01-17 16:43:01', '2011-01-17 16:43:01')[0m
+  [1m[35mSQL (76.9ms)[0m  COMMIT
+Rendered shared/_price-slider.html (1.1ms)
+Rendered requests/_form.html.haml (104.8ms)
+Rendered shared/_head.html.haml (24.0ms)
+Rendered shared/_flashes.html.haml (11.2ms)
+Rendered shared/_user_bar.html.haml (15.7ms)
+Rendered requests/new.html.haml within layouts/application (200.8ms)
+Completed 200 OK in 556ms (Views: 216.3ms | ActiveRecord: 87.6ms)
+
+
+Started GET "/check_for_new_requests.js?count=142" for 127.0.0.1 at 2011-01-17 19:43:03 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"142"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.8ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/check_for_new_requests.js.haml (4.3ms)
+Completed 200 OK in 100ms (Views: 8.4ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/update_requests_count.js" for 127.0.0.1 at 2011-01-17 19:43:05 +0300
+  Processing by RequestsController#update_requests_count as JS
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (5.6ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/update_requests_count.js.haml (2.7ms)
+Completed 200 OK in 132ms (Views: 8.5ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/fetch_new_requests.js?type=0&count=142" for 127.0.0.1 at 2011-01-17 19:43:05 +0300
+  Processing by RequestsController#fetch_new_requests as JS
+  Parameters: {"type"=>"0", "count"=>"142"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.8ms)[0m  SELECT `requests`.* FROM `requests`
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `requests`.* FROM `requests`[0m
+Rendered requests/fetch_new_requests.js.haml (24.1ms)
+Completed 200 OK in 205ms (Views: 28.1ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/fetch_new_requests.js?type=1&count=142" for 127.0.0.1 at 2011-01-17 19:43:05 +0300
+  Processing by RequestsController#fetch_new_requests as JS
+  Parameters: {"type"=>"1", "count"=>"142"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+  [1m[36mRequest Load (2.0ms)[0m  [1mSELECT `requests`.* FROM `requests`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/fetch_new_requests.js.haml (25.4ms)
+Completed 200 OK in 123ms (Views: 29.3ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/check_for_new_requests.js?count=143" for 127.0.0.1 at 2011-01-17 19:43:06 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"143"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (2.6ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/check_for_new_requests.js.haml (4.6ms)
+Completed 200 OK in 172ms (Views: 8.6ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-17 19:43:10 +0300
+  Processing by RequestsController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+Rendered shared/_price-slider.html (5.9ms)
+Rendered requests/_form.html.haml (143.1ms)
+Rendered shared/_head.html.haml (20.5ms)
+Rendered shared/_flashes.html.haml (4.3ms)
+Rendered shared/_user_bar.html.haml (28.1ms)
+Rendered requests/new.html.haml within layouts/application (248.2ms)
+Completed 200 OK in 413ms (Views: 275.7ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/requests" for 127.0.0.1 at 2011-01-17 19:43:13 +0300
+  Processing by RequestsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "request"=>{"fullname"=>"3", "price"=>"8000", "email"=>"3", "details"=>"3"}, "x"=>"68", "y"=>"6"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+  [1m[36mSQL (8.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.6ms)[0m  describe `requests`
+  [1m[36mAREL (4.0ms)[0m  [1mINSERT INTO `requests` (`fullname`, `email`, `price`, `details`, `created_at`, `updated_at`) VALUES ('3', '3', 8000, '3', '2011-01-17 16:43:14', '2011-01-17 16:43:14')[0m
+  [1m[35mSQL (32.2ms)[0m  COMMIT
+Rendered shared/_price-slider.html (1.1ms)
+Rendered requests/_form.html.haml (91.4ms)
+Rendered shared/_head.html.haml (27.0ms)
+Rendered shared/_flashes.html.haml (11.0ms)
+Rendered shared/_user_bar.html.haml (16.2ms)
+Rendered requests/new.html.haml within layouts/application (198.2ms)
+Completed 200 OK in 481ms (Views: 214.8ms | ActiveRecord: 46.8ms)
+
+
+Started GET "/check_for_new_requests.js?count=143" for 127.0.0.1 at 2011-01-17 19:43:16 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"143"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.8ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/check_for_new_requests.js.haml (4.2ms)
+Completed 200 OK in 103ms (Views: 8.4ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/update_requests_count.js" for 127.0.0.1 at 2011-01-17 19:43:18 +0300
+  Processing by RequestsController#update_requests_count as JS
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.7ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/update_requests_count.js.haml (7.7ms)
+Completed 200 OK in 124ms (Views: 15.5ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/fetch_new_requests.js?type=1&count=143" for 127.0.0.1 at 2011-01-17 19:43:18 +0300
+  Processing by RequestsController#fetch_new_requests as JS
+  Parameters: {"type"=>"1", "count"=>"143"}
+  [1m[36mUser Load (2.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.8ms)[0m  SELECT `requests`.* FROM `requests`
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `requests`.* FROM `requests`[0m
+Rendered requests/fetch_new_requests.js.haml (42.4ms)
+Completed 200 OK in 243ms (Views: 51.8ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/fetch_new_requests.js?type=0&count=143" for 127.0.0.1 at 2011-01-17 19:43:18 +0300
+  Processing by RequestsController#fetch_new_requests as JS
+  Parameters: {"type"=>"0", "count"=>"143"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+  [1m[36mRequest Load (1.8ms)[0m  [1mSELECT `requests`.* FROM `requests`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/fetch_new_requests.js.haml (24.5ms)
+Completed 200 OK in 122ms (Views: 28.4ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/check_for_new_requests.js?count=144" for 127.0.0.1 at 2011-01-17 19:43:18 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"144"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.8ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/check_for_new_requests.js.haml (4.4ms)
+Completed 200 OK in 102ms (Views: 8.6ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-17 19:43:23 +0300
+  Processing by RequestsController#new as HTML
+  [1m[36mUser Load (2.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+Rendered shared/_price-slider.html (1.1ms)
+Rendered requests/_form.html.haml (106.7ms)
+Rendered shared/_head.html.haml (27.6ms)
+Rendered shared/_flashes.html.haml (4.3ms)
+Rendered shared/_user_bar.html.haml (20.3ms)
+Rendered requests/new.html.haml within layouts/application (200.9ms)
+Completed 200 OK in 380ms (Views: 224.7ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/check_for_new_requests.js?count=144" for 127.0.0.1 at 2011-01-17 19:43:24 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"144"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+  [1m[36mRequest Load (1.7ms)[0m  [1mSELECT `requests`.* FROM `requests`[0m
+Rendered requests/check_for_new_requests.js.haml (4.4ms)
+Completed 200 OK in 112ms (Views: 10.4ms | ActiveRecord: 2.4ms)
+
+
+Started POST "/requests" for 127.0.0.1 at 2011-01-17 19:43:27 +0300
+  Processing by RequestsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "request"=>{"fullname"=>"4", "price"=>"8000", "email"=>"4", "details"=>"4"}, "x"=>"71", "y"=>"8"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.7ms)[0m  describe `requests`
+  [1m[36mAREL (0.8ms)[0m  [1mINSERT INTO `requests` (`fullname`, `email`, `price`, `details`, `created_at`, `updated_at`) VALUES ('4', '4', 8000, '4', '2011-01-17 16:43:27', '2011-01-17 16:43:27')[0m
+  [1m[35mSQL (49.3ms)[0m  COMMIT
+Rendered shared/_price-slider.html (1.1ms)
+Rendered requests/_form.html.haml (206.6ms)
+Rendered shared/_head.html.haml (17.4ms)
+Rendered shared/_flashes.html.haml (7.2ms)
+Rendered shared/_user_bar.html.haml (16.1ms)
+Rendered requests/new.html.haml within layouts/application (284.6ms)
+Completed 200 OK in 571ms (Views: 302.6ms | ActiveRecord: 52.6ms)
+
+
+Started GET "/check_for_new_requests.js?count=144" for 127.0.0.1 at 2011-01-17 19:44:24 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"144"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.8ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/check_for_new_requests.js.haml (4.2ms)
+Completed 200 OK in 98ms (Views: 8.3ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/update_requests_count.js" for 127.0.0.1 at 2011-01-17 19:44:31 +0300
+  Processing by RequestsController#update_requests_count as JS
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.9ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/update_requests_count.js.haml (3.9ms)
+Completed 200 OK in 117ms (Views: 16.3ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/fetch_new_requests.js?type=1&count=144" for 127.0.0.1 at 2011-01-17 19:44:32 +0300
+  Processing by RequestsController#fetch_new_requests as JS
+  Parameters: {"type"=>"1", "count"=>"144"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.8ms)[0m  SELECT `requests`.* FROM `requests`
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `requests`.* FROM `requests`[0m
+Rendered requests/fetch_new_requests.js.haml (34.6ms)
+Completed 200 OK in 130ms (Views: 38.4ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/fetch_new_requests.js?type=0&count=144" for 127.0.0.1 at 2011-01-17 19:44:32 +0300
+  Processing by RequestsController#fetch_new_requests as JS
+  Parameters: {"type"=>"0", "count"=>"144"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+  [1m[36mRequest Load (1.8ms)[0m  [1mSELECT `requests`.* FROM `requests`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/fetch_new_requests.js.haml (23.9ms)
+Completed 200 OK in 122ms (Views: 28.0ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/check_for_new_requests.js?count=145" for 127.0.0.1 at 2011-01-17 19:44:32 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"145"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.7ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/check_for_new_requests.js.haml (4.3ms)
+Completed 200 OK in 98ms (Views: 8.4ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/check_for_new_requests.js?count=145" for 127.0.0.1 at 2011-01-17 19:45:24 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"145"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.8ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/check_for_new_requests.js.haml (4.2ms)
+Completed 200 OK in 97ms (Views: 8.4ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/check_for_new_requests.js?count=145" for 127.0.0.1 at 2011-01-17 19:46:24 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"145"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.8ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/check_for_new_requests.js.haml (4.5ms)
+Completed 200 OK in 217ms (Views: 10.1ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/check_for_new_requests.js?count=145" for 127.0.0.1 at 2011-01-17 19:47:24 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"145"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.8ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/check_for_new_requests.js.haml (4.3ms)
+Completed 200 OK in 102ms (Views: 11.2ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/check_for_new_requests.js?count=145" for 127.0.0.1 at 2011-01-17 19:48:24 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"145"}
+  [1m[36mUser Load (2.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.8ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/check_for_new_requests.js.haml (4.1ms)
+Completed 200 OK in 109ms (Views: 8.1ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/check_for_new_requests.js?count=145" for 127.0.0.1 at 2011-01-17 19:49:24 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"145"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.8ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/check_for_new_requests.js.haml (15.9ms)
+Completed 200 OK in 253ms (Views: 37.6ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/requests" for 127.0.0.1 at 2011-01-17 19:50:10 +0300
+  Processing by RequestsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (0.5ms)[0m  SELECT `requests`.* FROM `requests` ORDER BY requests.id DESC LIMIT 1
+  [1m[36mRequest Load (6.8ms)[0m  [1mSELECT `requests`.* FROM `requests` ORDER BY created_at desc[0m
+Rendered shared/_head.html.haml (20.5ms)
+Rendered shared/_flashes.html.haml (4.2ms)
+Rendered shared/_user_bar.html.haml (19.4ms)
+Rendered requests/index.html.haml within layouts/application (433.3ms)
+Completed 200 OK in 614ms (Views: 455.9ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/check_for_new_requests.js?count=145" for 127.0.0.1 at 2011-01-17 19:50:14 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"145"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+  [1m[36mRequest Load (2.3ms)[0m  [1mSELECT `requests`.* FROM `requests`[0m
+Rendered requests/check_for_new_requests.js.haml (6.4ms)
+Completed 200 OK in 225ms (Views: 10.7ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-17 19:50:17 +0300
+  Processing by RequestsController#new as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+Rendered shared/_price-slider.html (1.1ms)
+Rendered requests/_form.html.haml (134.3ms)
+Rendered shared/_head.html.haml (14.5ms)
+Rendered shared/_flashes.html.haml (14.6ms)
+Rendered shared/_user_bar.html.haml (31.1ms)
+Rendered requests/new.html.haml within layouts/application (250.1ms)
+Completed 200 OK in 426ms (Views: 272.2ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/requests" for 127.0.0.1 at 2011-01-17 19:50:36 +0300
+  Processing by RequestsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "request"=>{"fullname"=>"555", "price"=>"5000", "email"=>"55", "details"=>"55"}, "x"=>"43", "y"=>"3"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mSQL (5.4ms)[0m  BEGIN
+  [1m[36mSQL (1.7ms)[0m  [1mdescribe `requests`[0m
+  [1m[35mAREL (8.5ms)[0m  INSERT INTO `requests` (`fullname`, `email`, `price`, `details`, `created_at`, `updated_at`) VALUES ('555', '55', 5000, '55', '2011-01-17 16:50:37', '2011-01-17 16:50:37')
+  [1m[36mSQL (28.1ms)[0m  [1mCOMMIT[0m
+Rendered shared/_price-slider.html (1.1ms)
+Rendered requests/_form.html.haml (115.5ms)
+Rendered shared/_head.html.haml (12.0ms)
+Rendered shared/_flashes.html.haml (10.4ms)
+Rendered shared/_user_bar.html.haml (18.7ms)
+Rendered requests/new.html.haml within layouts/application (212.9ms)
+Completed 200 OK in 509ms (Views: 250.4ms | ActiveRecord: 44.5ms)
+
+
+Started GET "/check_for_new_requests.js?count=145" for 127.0.0.1 at 2011-01-17 19:50:40 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"145"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+  [1m[36mRequest Load (1.8ms)[0m  [1mSELECT `requests`.* FROM `requests`[0m
+Rendered requests/check_for_new_requests.js.haml (4.3ms)
+Completed 200 OK in 102ms (Views: 8.5ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/update_requests_count.js" for 127.0.0.1 at 2011-01-17 19:50:42 +0300
+  Processing by RequestsController#update_requests_count as JS
+  [1m[35mUser Load (0.6ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+  [1m[36mRequest Load (1.8ms)[0m  [1mSELECT `requests`.* FROM `requests`[0m
+Rendered requests/update_requests_count.js.haml (2.6ms)
+Completed 200 OK in 98ms (Views: 6.7ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/fetch_new_requests.js?type=0&count=145" for 127.0.0.1 at 2011-01-17 19:50:42 +0300
+  Processing by RequestsController#fetch_new_requests as JS
+  Parameters: {"type"=>"0", "count"=>"145"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+  [1m[36mRequest Load (1.8ms)[0m  [1mSELECT `requests`.* FROM `requests`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/fetch_new_requests.js.haml (31.1ms)
+Completed 200 OK in 245ms (Views: 43.2ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/check_for_new_requests.js?count=146" for 127.0.0.1 at 2011-01-17 19:50:42 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"146"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (4.6ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/check_for_new_requests.js.haml (4.3ms)
+Completed 200 OK in 103ms (Views: 8.5ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/check_for_new_requests.js?count=146" for 127.0.0.1 at 2011-01-17 19:51:04 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"146"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.8ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/check_for_new_requests.js.haml (4.1ms)
+Completed 200 OK in 95ms (Views: 8.1ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/requests" for 127.0.0.1 at 2011-01-17 19:51:07 +0300
+  Processing by RequestsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.6ms)[0m  SELECT `requests`.* FROM `requests` ORDER BY requests.id DESC LIMIT 1
+  [1m[36mRequest Load (3.8ms)[0m  [1mSELECT `requests`.* FROM `requests` ORDER BY created_at desc[0m
+Rendered shared/_head.html.haml (15.7ms)
+Rendered shared/_flashes.html.haml (24.0ms)
+Rendered shared/_user_bar.html.haml (35.6ms)
+Rendered requests/index.html.haml within layouts/application (536.1ms)
+Completed 200 OK in 740ms (Views: 550.0ms | ActiveRecord: 6.1ms)
+
+
+Started POST "/requests" for 127.0.0.1 at 2011-01-17 19:51:15 +0300
+  Processing by RequestsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "request"=>{"fullname"=>"666", "price"=>"8000", "email"=>"66", "details"=>"66"}, "x"=>"31", "y"=>"12"}
+  [1m[35mUser Load (11.6ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.7ms)[0m  describe `requests`
+  [1m[36mAREL (5.9ms)[0m  [1mINSERT INTO `requests` (`fullname`, `email`, `price`, `details`, `created_at`, `updated_at`) VALUES ('666', '66', 8000, '66', '2011-01-17 16:51:16', '2011-01-17 16:51:16')[0m
+  [1m[35mSQL (51.8ms)[0m  COMMIT
+Rendered shared/_price-slider.html (16.3ms)
+Rendered requests/_form.html.haml (145.3ms)
+Rendered shared/_head.html.haml (12.2ms)
+Rendered shared/_flashes.html.haml (20.2ms)
+Rendered shared/_user_bar.html.haml (38.7ms)
+Rendered requests/new.html.haml within layouts/application (272.3ms)
+Completed 200 OK in 635ms (Views: 298.5ms | ActiveRecord: 71.2ms)
+
+
+Started GET "/check_for_new_requests.js?count=146" for 127.0.0.1 at 2011-01-17 19:51:18 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"146"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.8ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/check_for_new_requests.js.haml (4.3ms)
+Completed 200 OK in 98ms (Views: 8.5ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/fetch_new_requests.js?count=146" for 127.0.0.1 at 2011-01-17 19:51:19 +0300
+  Processing by RequestsController#fetch_new_requests as JS
+  Parameters: {"count"=>"146"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.8ms)[0m  SELECT `requests`.* FROM `requests`
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `requests`.* FROM `requests`[0m
+Rendered requests/fetch_new_requests.js.haml (26.9ms)
+Completed 200 OK in 158ms (Views: 40.8ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/update_requests_count.js" for 127.0.0.1 at 2011-01-17 19:51:20 +0300
+  Processing by RequestsController#update_requests_count as JS
+  [1m[35mUser Load (0.6ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+  [1m[36mRequest Load (2.6ms)[0m  [1mSELECT `requests`.* FROM `requests`[0m
+Rendered requests/update_requests_count.js.haml (2.6ms)
+Completed 200 OK in 199ms (Views: 18.0ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/check_for_new_requests.js?count=146" for 127.0.0.1 at 2011-01-17 19:51:20 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"146"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+  [1m[36mRequest Load (1.9ms)[0m  [1mSELECT `requests`.* FROM `requests`[0m
+Rendered requests/check_for_new_requests.js.haml (4.5ms)
+Completed 200 OK in 95ms (Views: 8.5ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/fetch_new_requests.js?count=147" for 127.0.0.1 at 2011-01-17 19:51:23 +0300
+  Processing by RequestsController#fetch_new_requests as JS
+  Parameters: {"count"=>"147"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+  [1m[36mRequest Load (1.8ms)[0m  [1mSELECT `requests`.* FROM `requests`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/fetch_new_requests.js.haml (7.0ms)
+Completed 200 OK in 104ms (Views: 10.9ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/update_requests_count.js" for 127.0.0.1 at 2011-01-17 19:51:23 +0300
+  Processing by RequestsController#update_requests_count as JS
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.8ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/update_requests_count.js.haml (2.7ms)
+Completed 200 OK in 104ms (Views: 6.9ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/check_for_new_requests.js?count=147" for 127.0.0.1 at 2011-01-17 19:51:23 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"147"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (11.5ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/check_for_new_requests.js.haml (4.4ms)
+Completed 200 OK in 108ms (Views: 8.4ms | ActiveRecord: 12.2ms)
+
+
+Started GET "/check_for_new_requests.js?count=147" for 127.0.0.1 at 2011-01-17 19:52:09 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"147"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.8ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/check_for_new_requests.js.haml (4.3ms)
+Completed 200 OK in 173ms (Views: 8.4ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/check_for_new_requests.js?count=147" for 127.0.0.1 at 2011-01-17 19:53:09 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"147"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.8ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/check_for_new_requests.js.haml (4.3ms)
+Completed 200 OK in 95ms (Views: 8.4ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/check_for_new_requests.js?count=147" for 127.0.0.1 at 2011-01-17 19:54:09 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"147"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.8ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/check_for_new_requests.js.haml (5.1ms)
+Completed 200 OK in 101ms (Views: 9.1ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/requests" for 127.0.0.1 at 2011-01-17 19:54:12 +0300
+  Processing by RequestsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (0.5ms)[0m  SELECT `requests`.* FROM `requests` ORDER BY requests.id DESC LIMIT 1
+  [1m[36mRequest Load (3.4ms)[0m  [1mSELECT `requests`.* FROM `requests` ORDER BY created_at desc[0m
+Rendered shared/_head.html.haml (10.7ms)
+Rendered shared/_flashes.html.haml (8.5ms)
+Rendered shared/_user_bar.html.haml (31.8ms)
+Rendered requests/index.html.haml within layouts/application (528.4ms)
+Completed 200 OK in 779ms (Views: 563.9ms | ActiveRecord: 4.6ms)
+
+
+Started POST "/requests" for 127.0.0.1 at 2011-01-17 19:54:29 +0300
+  Processing by RequestsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "request"=>{"fullname"=>"777", "price"=>"7000", "email"=>"77", "details"=>"77"}, "x"=>"65", "y"=>"3"}
+  [1m[35mUser Load (13.4ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+  [1m[36mSQL (7.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (5.7ms)[0m  describe `requests`
+  [1m[36mAREL (14.0ms)[0m  [1mINSERT INTO `requests` (`fullname`, `email`, `price`, `details`, `created_at`, `updated_at`) VALUES ('777', '77', 7000, '77', '2011-01-17 16:54:29', '2011-01-17 16:54:29')[0m
+  [1m[35mSQL (46.6ms)[0m  COMMIT
+Rendered shared/_price-slider.html (1.1ms)
+Rendered requests/_form.html.haml (115.9ms)
+Rendered shared/_head.html.haml (17.6ms)
+Rendered shared/_flashes.html.haml (5.6ms)
+Rendered shared/_user_bar.html.haml (29.4ms)
+Rendered requests/new.html.haml within layouts/application (224.7ms)
+Completed 200 OK in 577ms (Views: 259.4ms | ActiveRecord: 86.7ms)
+
+
+Started GET "/check_for_new_requests.js?count=147" for 127.0.0.1 at 2011-01-17 19:54:32 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"147"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (2.0ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/check_for_new_requests.js.haml (4.1ms)
+Completed 200 OK in 99ms (Views: 8.4ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/update_requests_count.js" for 127.0.0.1 at 2011-01-17 19:54:34 +0300
+  Processing by RequestsController#update_requests_count as JS
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (6.7ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/update_requests_count.js.haml (2.6ms)
+Completed 200 OK in 146ms (Views: 22.0ms | ActiveRecord: 7.4ms)
+
+
+Started GET "/fetch_new_requests.js?count=147" for 127.0.0.1 at 2011-01-17 19:54:34 +0300
+  Processing by RequestsController#fetch_new_requests as JS
+  Parameters: {"count"=>"147"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.8ms)[0m  SELECT `requests`.* FROM `requests`
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `requests`.* FROM `requests`[0m
+Rendered requests/fetch_new_requests.js.haml (37.2ms)
+Completed 200 OK in 229ms (Views: 41.6ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/check_for_new_requests.js?count=148" for 127.0.0.1 at 2011-01-17 19:54:34 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"148"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+  [1m[36mRequest Load (1.8ms)[0m  [1mSELECT `requests`.* FROM `requests`[0m
+Rendered requests/check_for_new_requests.js.haml (4.6ms)
+Completed 200 OK in 99ms (Views: 8.6ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/check_for_new_requests.js?count=148" for 127.0.0.1 at 2011-01-17 19:54:59 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"148"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+  [1m[36mRequest Load (1.8ms)[0m  [1mSELECT `requests`.* FROM `requests`[0m
+Rendered requests/check_for_new_requests.js.haml (86.9ms)
+Completed 200 OK in 303ms (Views: 96.4ms | ActiveRecord: 2.5ms)
+
+
+Started POST "/requests" for 127.0.0.1 at 2011-01-17 19:55:10 +0300
+  Processing by RequestsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "request"=>{"fullname"=>"FINALFINALFINALFINALFINALFINAL", "price"=>"8000", "email"=>"77", "details"=>"77"}, "x"=>"62", "y"=>"17"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (6.5ms)[0m  describe `requests`
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO `requests` (`fullname`, `email`, `price`, `details`, `created_at`, `updated_at`) VALUES ('FINALFINALFINALFINALFINALFINAL', '77', 8000, '77', '2011-01-17 16:55:10', '2011-01-17 16:55:10')[0m
+  [1m[35mSQL (41.3ms)[0m  COMMIT
+Rendered shared/_price-slider.html (1.0ms)
+Rendered requests/_form.html.haml (70.2ms)
+Rendered shared/_head.html.haml (17.7ms)
+Rendered shared/_flashes.html.haml (4.7ms)
+Rendered shared/_user_bar.html.haml (19.6ms)
+Rendered requests/new.html.haml within layouts/application (141.7ms)
+Completed 200 OK in 454ms (Views: 172.1ms | ActiveRecord: 49.4ms)
+
+
+Started GET "/check_for_new_requests.js?count=148" for 127.0.0.1 at 2011-01-17 19:55:13 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"148"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (2.1ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/check_for_new_requests.js.haml (4.5ms)
+Completed 200 OK in 110ms (Views: 8.6ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/check_for_new_requests.js?count=148" for 127.0.0.1 at 2011-01-17 19:55:14 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"148"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.9ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/check_for_new_requests.js.haml (4.5ms)
+Completed 200 OK in 137ms (Views: 8.5ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/update_requests_count.js" for 127.0.0.1 at 2011-01-17 19:55:14 +0300
+  Processing by RequestsController#update_requests_count as JS
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.8ms)[0m  SELECT `requests`.* FROM `requests`
+Rendered requests/update_requests_count.js.haml (2.7ms)
+Completed 200 OK in 239ms (Views: 6.8ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/fetch_new_requests.js?count=148" for 127.0.0.1 at 2011-01-17 19:55:15 +0300
+  Processing by RequestsController#fetch_new_requests as JS
+  Parameters: {"count"=>"148"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1[0m
+  [1m[35mRequest Load (1.8ms)[0m  SELECT `requests`.* FROM `requests`
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `requests`.* FROM `requests`[0m
+Rendered requests/fetch_new_requests.js.haml (19.4ms)
+Completed 200 OK in 145ms (Views: 24.0ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/check_for_new_requests.js?count=149" for 127.0.0.1 at 2011-01-17 19:55:15 +0300
+  Processing by RequestsController#check_for_new_requests as JS
+  Parameters: {"count"=>"149"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE (`users`.`remember_token` = '7bfe99d84d32893062507692eaf77bb37b5be9e4') LIMIT 1
+  [1m[36mRequest Load (1.8ms)[0m  [1mSELECT `requests`.* FROM `requests`[0m
+Rendered requests/check_for_new_requests.js.haml (4.2ms)
+Completed 200 OK in 117ms (Views: 8.3ms | ActiveRecord: 2.5ms)

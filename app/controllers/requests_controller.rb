@@ -24,6 +24,28 @@ class RequestsController < ApplicationController
       format.js { render :layout => false } # check_for_new_requests.js.haml
     end
   end
+  
+  def fetch_new_requests
+    @requests_count = Request.all.count
+    @current_requests_count = params[:count].to_i
+    unless @request_count == @current_requests_count
+      @new_requests_count = @requests_count - @current_requests_count
+      
+      @new_requests = Request.all.last(@new_requests_count).reverse
+    end
+
+    respond_to do |format|
+      format.js { render :layout => false } # fetch_new_requests.js.haml
+    end
+  end
+  
+  def update_requests_count
+    @requests_count = Request.all.count
+    
+    respond_to do |format|
+      format.js { render :layout => false } # update_requests_count.js.haml
+    end
+  end
 
   def show
     @request = Request.find(params[:id])
